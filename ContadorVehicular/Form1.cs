@@ -156,8 +156,10 @@ namespace ContadorVehicular
 
         #region Formularios hijos
 
-        private void AbrirFormulario(object formHijo)
+        private Form activeForm = null;
+        private void AbrirFormulario(Form formHijo)
         {
+            /*
             if(this.panelCont.Controls.Count > 0)
             {
                 this.panelCont.Controls.RemoveAt(0);
@@ -167,13 +169,30 @@ namespace ContadorVehicular
             fh.Dock = DockStyle.Fill;
             this.panelCont.Controls.Add(fh);
             this.panelCont.Tag = fh;
-            fh.Show();  
+            fh.Show();  */
+            
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+                
+            activeForm = formHijo;
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill;
+            this.panelCont.Controls.Add(formHijo);
+            this.panelCont.Tag = formHijo;
+            formHijo.BringToFront();
+            formHijo.Show();
+
+
         }
 
 
 
         #endregion
 
+        #region FormulariosHijos
         private void btnEstacionamiento_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormEstacionamiento());
@@ -193,5 +212,6 @@ namespace ContadorVehicular
         {
             AbrirFormulario(new Inicio());
         }
+        #endregion
     }
 }
