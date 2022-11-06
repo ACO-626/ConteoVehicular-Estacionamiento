@@ -41,7 +41,7 @@ namespace ContadorVehicular
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(319, 68);
+            this.pictureBox2.Location = new System.Drawing.Point(320, 24);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(271, 262);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -53,7 +53,7 @@ namespace ContadorVehicular
             this.textBoxUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxUsuario.Location = new System.Drawing.Point(319, 362);
+            this.textBoxUsuario.Location = new System.Drawing.Point(320, 318);
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(271, 35);
             this.textBoxUsuario.TabIndex = 11;
@@ -67,7 +67,7 @@ namespace ContadorVehicular
             this.btnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciar.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(346, 480);
+            this.btnIniciar.Location = new System.Drawing.Point(347, 436);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(193, 45);
             this.btnIniciar.TabIndex = 12;
@@ -79,7 +79,7 @@ namespace ContadorVehicular
             this.textBoxClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxClave.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxClave.Location = new System.Drawing.Point(319, 417);
+            this.textBoxClave.Location = new System.Drawing.Point(320, 373);
             this.textBoxClave.Name = "textBoxClave";
             this.textBoxClave.Size = new System.Drawing.Size(271, 35);
             this.textBoxClave.TabIndex = 13;

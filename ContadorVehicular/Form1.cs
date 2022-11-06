@@ -199,6 +199,12 @@ namespace ContadorVehicular
             AbrirFormulario(new FormEstacionamiento());
             labelHeaderTittle.Text = "Sistema de conteo";
             labelHeaderSubtittle.Text = "vehicular";
+            
+            
+            btnSesion.BackColor = Color.FromArgb(31, 31, 31);
+            btnSettings.BackColor = Color.FromArgb(31, 31, 31);
+            btnStatics.BackColor = Color.FromArgb(31, 31, 31);
+            btnEstacionamiento.BackColor = Color.FromArgb(205, 23, 30);
         }
 
         private void btnStatics_Click(object sender, EventArgs e)
@@ -206,6 +212,10 @@ namespace ContadorVehicular
             AbrirFormulario(new FormStatics());
             labelHeaderTittle.Text = "Estadística";
             labelHeaderSubtittle.Text = "Análisis de datos";
+            btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
+            btnSesion.BackColor = Color.FromArgb(31, 31, 31);
+            btnSettings.BackColor = Color.FromArgb(31, 31, 31);
+            btnStatics.BackColor = Color.FromArgb(205, 23, 30);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -213,7 +223,10 @@ namespace ContadorVehicular
             AbrirFormulario(new FormSettings());
             labelHeaderTittle.Text = "Ajustes";
             labelHeaderSubtittle.Text = "Requiere identificación";
-
+            btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
+            btnSesion.BackColor = Color.FromArgb(31, 31, 31);         
+            btnStatics.BackColor = Color.FromArgb(31, 31, 31);
+            btnSettings.BackColor = Color.FromArgb(205, 23, 30);
 
         }
 
@@ -222,7 +235,13 @@ namespace ContadorVehicular
             AbrirFormulario(new Inicio());
             labelHeaderTittle.Text = "Sesión";
             labelHeaderSubtittle.Text = "Identificación de trabajador";
+            btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
+            
+            btnSettings.BackColor = Color.FromArgb(31, 31, 31);
+            btnStatics.BackColor = Color.FromArgb(31, 31, 31);
+            btnSesion.BackColor = Color.FromArgb(205, 23, 30);
         }
+
         #endregion
 
        

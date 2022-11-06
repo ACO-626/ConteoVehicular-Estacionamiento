@@ -35,6 +35,9 @@ namespace ContadorVehicular
             this.labelSimpleEspacios = new System.Windows.Forms.Label();
             this.labelEspacios = new System.Windows.Forms.Label();
             this.BarraTittle = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelSimpleQWindowTittle = new System.Windows.Forms.Label();
+            this.labelSimpleCarros = new System.Windows.Forms.Label();
             this.btnMax2 = new System.Windows.Forms.PictureBox();
             this.btnMinimiza = new System.Windows.Forms.PictureBox();
             this.btnMax = new System.Windows.Forms.PictureBox();
@@ -48,22 +51,19 @@ namespace ContadorVehicular
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEstacionamiento = new System.Windows.Forms.Button();
             this.panelCont = new System.Windows.Forms.Panel();
-            this.labelSimpleCarros = new System.Windows.Forms.Label();
-            this.labelSimpleQWindowTittle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pictureLogoApp = new System.Windows.Forms.PictureBox();
             this.pictureFAClogo = new System.Windows.Forms.PictureBox();
             this.labelHeaderSubtittle = new System.Windows.Forms.Label();
             this.labelHeaderTittle = new System.Windows.Forms.Label();
             this.BarraTittle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimiza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelCont.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).BeginInit();
@@ -87,7 +87,7 @@ namespace ContadorVehicular
             this.labelCounterCar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labelCounterCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCounterCar.ForeColor = System.Drawing.Color.White;
-            this.labelCounterCar.Location = new System.Drawing.Point(1029, 7);
+            this.labelCounterCar.Location = new System.Drawing.Point(1023, 7);
             this.labelCounterCar.Name = "labelCounterCar";
             this.labelCounterCar.Size = new System.Drawing.Size(18, 20);
             this.labelCounterCar.TabIndex = 2;
@@ -99,7 +99,7 @@ namespace ContadorVehicular
             this.labelSimpleEspacios.BackColor = System.Drawing.Color.Transparent;
             this.labelSimpleEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSimpleEspacios.ForeColor = System.Drawing.Color.White;
-            this.labelSimpleEspacios.Location = new System.Drawing.Point(819, 7);
+            this.labelSimpleEspacios.Location = new System.Drawing.Point(813, 7);
             this.labelSimpleEspacios.Name = "labelSimpleEspacios";
             this.labelSimpleEspacios.Size = new System.Drawing.Size(78, 20);
             this.labelSimpleEspacios.TabIndex = 4;
@@ -111,7 +111,7 @@ namespace ContadorVehicular
             this.labelEspacios.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labelEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEspacios.ForeColor = System.Drawing.Color.White;
-            this.labelEspacios.Location = new System.Drawing.Point(903, 7);
+            this.labelEspacios.Location = new System.Drawing.Point(897, 7);
             this.labelEspacios.Name = "labelEspacios";
             this.labelEspacios.Size = new System.Drawing.Size(18, 20);
             this.labelEspacios.TabIndex = 5;
@@ -136,6 +136,40 @@ namespace ContadorVehicular
             this.BarraTittle.Size = new System.Drawing.Size(1189, 35);
             this.BarraTittle.TabIndex = 6;
             this.BarraTittle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTittle_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelSimpleQWindowTittle
+            // 
+            this.labelSimpleQWindowTittle.AutoSize = true;
+            this.labelSimpleQWindowTittle.BackColor = System.Drawing.Color.Transparent;
+            this.labelSimpleQWindowTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimpleQWindowTittle.ForeColor = System.Drawing.Color.White;
+            this.labelSimpleQWindowTittle.Location = new System.Drawing.Point(49, 7);
+            this.labelSimpleQWindowTittle.Name = "labelSimpleQWindowTittle";
+            this.labelSimpleQWindowTittle.Size = new System.Drawing.Size(215, 20);
+            this.labelSimpleQWindowTittle.TabIndex = 7;
+            this.labelSimpleQWindowTittle.Text = "Sistema de Conteo Vehicular";
+            // 
+            // labelSimpleCarros
+            // 
+            this.labelSimpleCarros.AutoSize = true;
+            this.labelSimpleCarros.BackColor = System.Drawing.Color.Transparent;
+            this.labelSimpleCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimpleCarros.ForeColor = System.Drawing.Color.White;
+            this.labelSimpleCarros.Location = new System.Drawing.Point(957, 7);
+            this.labelSimpleCarros.Name = "labelSimpleCarros";
+            this.labelSimpleCarros.Size = new System.Drawing.Size(60, 20);
+            this.labelSimpleCarros.TabIndex = 6;
+            this.labelSimpleCarros.Text = "Carros:";
             // 
             // btnMax2
             // 
@@ -286,7 +320,7 @@ namespace ContadorVehicular
             // 
             // btnEstacionamiento
             // 
-            this.btnEstacionamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnEstacionamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
             this.btnEstacionamiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEstacionamiento.FlatAppearance.BorderSize = 0;
             this.btnEstacionamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
@@ -310,40 +344,6 @@ namespace ContadorVehicular
             this.panelCont.Name = "panelCont";
             this.panelCont.Size = new System.Drawing.Size(1123, 550);
             this.panelCont.TabIndex = 8;
-            // 
-            // labelSimpleCarros
-            // 
-            this.labelSimpleCarros.AutoSize = true;
-            this.labelSimpleCarros.BackColor = System.Drawing.Color.Transparent;
-            this.labelSimpleCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimpleCarros.ForeColor = System.Drawing.Color.White;
-            this.labelSimpleCarros.Location = new System.Drawing.Point(963, 7);
-            this.labelSimpleCarros.Name = "labelSimpleCarros";
-            this.labelSimpleCarros.Size = new System.Drawing.Size(60, 20);
-            this.labelSimpleCarros.TabIndex = 6;
-            this.labelSimpleCarros.Text = "Carros:";
-            // 
-            // labelSimpleQWindowTittle
-            // 
-            this.labelSimpleQWindowTittle.AutoSize = true;
-            this.labelSimpleQWindowTittle.BackColor = System.Drawing.Color.Transparent;
-            this.labelSimpleQWindowTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimpleQWindowTittle.ForeColor = System.Drawing.Color.White;
-            this.labelSimpleQWindowTittle.Location = new System.Drawing.Point(49, 7);
-            this.labelSimpleQWindowTittle.Name = "labelSimpleQWindowTittle";
-            this.labelSimpleQWindowTittle.Size = new System.Drawing.Size(215, 20);
-            this.labelSimpleQWindowTittle.TabIndex = 7;
-            this.labelSimpleQWindowTittle.Text = "Sistema de Conteo Vehicular";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(13, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // panelHeader
             // 
@@ -419,6 +419,7 @@ namespace ContadorVehicular
             this.Load += new System.EventHandler(this.Form1_Load);
             this.BarraTittle.ResumeLayout(false);
             this.BarraTittle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimiza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
@@ -426,7 +427,6 @@ namespace ContadorVehicular
             this.panelMenu.ResumeLayout(false);
             this.panelCont.ResumeLayout(false);
             this.panelCont.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).EndInit();
