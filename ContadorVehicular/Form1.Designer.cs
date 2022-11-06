@@ -35,27 +35,38 @@ namespace ContadorVehicular
             this.labelSimpleEspacios = new System.Windows.Forms.Label();
             this.labelEspacios = new System.Windows.Forms.Label();
             this.BarraTittle = new System.Windows.Forms.Panel();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelCont = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.btnMax = new System.Windows.Forms.PictureBox();
-            this.btnMinimiza = new System.Windows.Forms.PictureBox();
             this.btnMax2 = new System.Windows.Forms.PictureBox();
-            this.btnEstacionamiento = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnStatics = new System.Windows.Forms.Button();
+            this.btnMinimiza = new System.Windows.Forms.PictureBox();
+            this.btnMax = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnSesion = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
-            this.btnSesion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnStatics = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEstacionamiento = new System.Windows.Forms.Button();
+            this.panelCont = new System.Windows.Forms.Panel();
+            this.labelSimpleCarros = new System.Windows.Forms.Label();
+            this.labelSimpleQWindowTittle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.pictureLogoApp = new System.Windows.Forms.PictureBox();
+            this.pictureFAClogo = new System.Windows.Forms.PictureBox();
+            this.labelHeaderSubtittle = new System.Windows.Forms.Label();
+            this.labelHeaderTittle = new System.Windows.Forms.Label();
             this.BarraTittle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimiza)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelCont.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimiza)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCom
@@ -64,7 +75,7 @@ namespace ContadorVehicular
             this.labelCom.AutoSize = true;
             this.labelCom.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labelCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCom.Location = new System.Drawing.Point(3, 613);
+            this.labelCom.Location = new System.Drawing.Point(3, 510);
             this.labelCom.Name = "labelCom";
             this.labelCom.Size = new System.Drawing.Size(87, 25);
             this.labelCom.TabIndex = 0;
@@ -74,10 +85,11 @@ namespace ContadorVehicular
             // 
             this.labelCounterCar.AutoSize = true;
             this.labelCounterCar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.labelCounterCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCounterCar.Location = new System.Drawing.Point(279, 3);
+            this.labelCounterCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCounterCar.ForeColor = System.Drawing.Color.White;
+            this.labelCounterCar.Location = new System.Drawing.Point(1029, 7);
             this.labelCounterCar.Name = "labelCounterCar";
-            this.labelCounterCar.Size = new System.Drawing.Size(24, 26);
+            this.labelCounterCar.Size = new System.Drawing.Size(18, 20);
             this.labelCounterCar.TabIndex = 2;
             this.labelCounterCar.Text = "0";
             // 
@@ -85,10 +97,11 @@ namespace ContadorVehicular
             // 
             this.labelSimpleEspacios.AutoSize = true;
             this.labelSimpleEspacios.BackColor = System.Drawing.Color.Transparent;
-            this.labelSimpleEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimpleEspacios.Location = new System.Drawing.Point(3, 0);
+            this.labelSimpleEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimpleEspacios.ForeColor = System.Drawing.Color.White;
+            this.labelSimpleEspacios.Location = new System.Drawing.Point(819, 7);
             this.labelSimpleEspacios.Name = "labelSimpleEspacios";
-            this.labelSimpleEspacios.Size = new System.Drawing.Size(107, 26);
+            this.labelSimpleEspacios.Size = new System.Drawing.Size(78, 20);
             this.labelSimpleEspacios.TabIndex = 4;
             this.labelSimpleEspacios.Text = "Espacios:";
             // 
@@ -96,16 +109,23 @@ namespace ContadorVehicular
             // 
             this.labelEspacios.AutoSize = true;
             this.labelEspacios.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.labelEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEspacios.Location = new System.Drawing.Point(106, 3);
+            this.labelEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEspacios.ForeColor = System.Drawing.Color.White;
+            this.labelEspacios.Location = new System.Drawing.Point(903, 7);
             this.labelEspacios.Name = "labelEspacios";
-            this.labelEspacios.Size = new System.Drawing.Size(24, 26);
+            this.labelEspacios.Size = new System.Drawing.Size(18, 20);
             this.labelEspacios.TabIndex = 5;
             this.labelEspacios.Text = "0";
             // 
             // BarraTittle
             // 
             this.BarraTittle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.BarraTittle.Controls.Add(this.pictureBox1);
+            this.BarraTittle.Controls.Add(this.labelSimpleQWindowTittle);
+            this.BarraTittle.Controls.Add(this.labelEspacios);
+            this.BarraTittle.Controls.Add(this.labelSimpleCarros);
+            this.BarraTittle.Controls.Add(this.labelCounterCar);
+            this.BarraTittle.Controls.Add(this.labelSimpleEspacios);
             this.BarraTittle.Controls.Add(this.btnMax2);
             this.BarraTittle.Controls.Add(this.btnMinimiza);
             this.BarraTittle.Controls.Add(this.btnMax);
@@ -116,6 +136,59 @@ namespace ContadorVehicular
             this.BarraTittle.Size = new System.Drawing.Size(1189, 35);
             this.BarraTittle.TabIndex = 6;
             this.BarraTittle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTittle_MouseDown);
+            // 
+            // btnMax2
+            // 
+            this.btnMax2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax2.Image = ((System.Drawing.Image)(resources.GetObject("btnMax2.Image")));
+            this.btnMax2.Location = new System.Drawing.Point(1113, 7);
+            this.btnMax2.Name = "btnMax2";
+            this.btnMax2.Size = new System.Drawing.Size(20, 20);
+            this.btnMax2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMax2.TabIndex = 4;
+            this.btnMax2.TabStop = false;
+            this.btnMax2.Visible = false;
+            this.btnMax2.Click += new System.EventHandler(this.btnMax2_Click);
+            // 
+            // btnMinimiza
+            // 
+            this.btnMinimiza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimiza.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimiza.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimiza.Image")));
+            this.btnMinimiza.Location = new System.Drawing.Point(1072, 7);
+            this.btnMinimiza.Name = "btnMinimiza";
+            this.btnMinimiza.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimiza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimiza.TabIndex = 3;
+            this.btnMinimiza.TabStop = false;
+            this.btnMinimiza.Click += new System.EventHandler(this.btnMinimiza_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
+            this.btnMax.Location = new System.Drawing.Point(1113, 7);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(20, 20);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMax.TabIndex = 2;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Location = new System.Drawing.Point(1153, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panelMenu
             // 
@@ -133,123 +206,23 @@ namespace ContadorVehicular
             this.panelMenu.Size = new System.Drawing.Size(66, 653);
             this.panelMenu.TabIndex = 7;
             // 
-            // panelCont
+            // btnSesion
             // 
-            this.panelCont.Controls.Add(this.label1);
-            this.panelCont.Controls.Add(this.labelEspacios);
-            this.panelCont.Controls.Add(this.labelCounterCar);
-            this.panelCont.Controls.Add(this.labelCom);
-            this.panelCont.Controls.Add(this.labelSimpleEspacios);
-            this.panelCont.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCont.Location = new System.Drawing.Point(66, 35);
-            this.panelCont.Name = "panelCont";
-            this.panelCont.Size = new System.Drawing.Size(1123, 653);
-            this.panelCont.TabIndex = 8;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1153, 7);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(20, 20);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 0;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
-            this.btnMax.Location = new System.Drawing.Point(1113, 7);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(20, 20);
-            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMax.TabIndex = 2;
-            this.btnMax.TabStop = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
-            // 
-            // btnMinimiza
-            // 
-            this.btnMinimiza.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimiza.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimiza.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimiza.Image")));
-            this.btnMinimiza.Location = new System.Drawing.Point(1072, 7);
-            this.btnMinimiza.Name = "btnMinimiza";
-            this.btnMinimiza.Size = new System.Drawing.Size(20, 20);
-            this.btnMinimiza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimiza.TabIndex = 3;
-            this.btnMinimiza.TabStop = false;
-            this.btnMinimiza.Click += new System.EventHandler(this.btnMinimiza_Click);
-            // 
-            // btnMax2
-            // 
-            this.btnMax2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMax2.Image = ((System.Drawing.Image)(resources.GetObject("btnMax2.Image")));
-            this.btnMax2.Location = new System.Drawing.Point(1113, 7);
-            this.btnMax2.Name = "btnMax2";
-            this.btnMax2.Size = new System.Drawing.Size(20, 20);
-            this.btnMax2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMax2.TabIndex = 4;
-            this.btnMax2.TabStop = false;
-            this.btnMax2.Visible = false;
-            this.btnMax2.Click += new System.EventHandler(this.btnMax2_Click);
-            // 
-            // btnEstacionamiento
-            // 
-            this.btnEstacionamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnEstacionamiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEstacionamiento.FlatAppearance.BorderSize = 0;
-            this.btnEstacionamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.btnEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.btnEstacionamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstacionamiento.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstacionamiento.ForeColor = System.Drawing.Color.White;
-            this.btnEstacionamiento.Location = new System.Drawing.Point(2, 287);
-            this.btnEstacionamiento.Name = "btnEstacionamiento";
-            this.btnEstacionamiento.Size = new System.Drawing.Size(66, 71);
-            this.btnEstacionamiento.TabIndex = 0;
-            this.btnEstacionamiento.Text = "E";
-            this.btnEstacionamiento.UseVisualStyleBackColor = false;
-            this.btnEstacionamiento.Click += new System.EventHandler(this.btnEstacionamiento_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.panel1.Location = new System.Drawing.Point(0, 287);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(8, 71);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.panel2.Location = new System.Drawing.Point(-2, 414);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 71);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnStatics
-            // 
-            this.btnStatics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnStatics.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStatics.FlatAppearance.BorderSize = 0;
-            this.btnStatics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.btnStatics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.btnStatics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatics.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatics.ForeColor = System.Drawing.Color.White;
-            this.btnStatics.Image = ((System.Drawing.Image)(resources.GetObject("btnStatics.Image")));
-            this.btnStatics.Location = new System.Drawing.Point(0, 414);
-            this.btnStatics.Name = "btnStatics";
-            this.btnStatics.Size = new System.Drawing.Size(66, 71);
-            this.btnStatics.TabIndex = 2;
-            this.btnStatics.UseVisualStyleBackColor = false;
-            this.btnStatics.Click += new System.EventHandler(this.btnStatics_Click);
+            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSesion.FlatAppearance.BorderSize = 0;
+            this.btnSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSesion.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesion.ForeColor = System.Drawing.Color.White;
+            this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
+            this.btnSesion.Location = new System.Drawing.Point(0, 36);
+            this.btnSesion.Name = "btnSesion";
+            this.btnSesion.Size = new System.Drawing.Size(66, 71);
+            this.btnSesion.TabIndex = 5;
+            this.btnSesion.UseVisualStyleBackColor = false;
+            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
             // 
             // panel3
             // 
@@ -277,34 +250,156 @@ namespace ContadorVehicular
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
-            // btnSesion
+            // panel2
             // 
-            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSesion.FlatAppearance.BorderSize = 0;
-            this.btnSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.btnSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSesion.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSesion.ForeColor = System.Drawing.Color.White;
-            this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
-            this.btnSesion.Location = new System.Drawing.Point(0, 36);
-            this.btnSesion.Name = "btnSesion";
-            this.btnSesion.Size = new System.Drawing.Size(66, 71);
-            this.btnSesion.TabIndex = 5;
-            this.btnSesion.UseVisualStyleBackColor = false;
-            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.panel2.Location = new System.Drawing.Point(-2, 414);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(8, 71);
+            this.panel2.TabIndex = 1;
             // 
-            // label1
+            // btnStatics
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(166, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 26);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Espacios:";
+            this.btnStatics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnStatics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatics.FlatAppearance.BorderSize = 0;
+            this.btnStatics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnStatics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.btnStatics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatics.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatics.ForeColor = System.Drawing.Color.White;
+            this.btnStatics.Image = ((System.Drawing.Image)(resources.GetObject("btnStatics.Image")));
+            this.btnStatics.Location = new System.Drawing.Point(0, 414);
+            this.btnStatics.Name = "btnStatics";
+            this.btnStatics.Size = new System.Drawing.Size(66, 71);
+            this.btnStatics.TabIndex = 2;
+            this.btnStatics.UseVisualStyleBackColor = false;
+            this.btnStatics.Click += new System.EventHandler(this.btnStatics_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.panel1.Location = new System.Drawing.Point(0, 287);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(8, 71);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnEstacionamiento
+            // 
+            this.btnEstacionamiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnEstacionamiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstacionamiento.FlatAppearance.BorderSize = 0;
+            this.btnEstacionamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnEstacionamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.btnEstacionamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstacionamiento.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstacionamiento.ForeColor = System.Drawing.Color.White;
+            this.btnEstacionamiento.Location = new System.Drawing.Point(2, 287);
+            this.btnEstacionamiento.Name = "btnEstacionamiento";
+            this.btnEstacionamiento.Size = new System.Drawing.Size(66, 71);
+            this.btnEstacionamiento.TabIndex = 0;
+            this.btnEstacionamiento.Text = "E";
+            this.btnEstacionamiento.UseVisualStyleBackColor = false;
+            this.btnEstacionamiento.Click += new System.EventHandler(this.btnEstacionamiento_Click);
+            // 
+            // panelCont
+            // 
+            this.panelCont.Controls.Add(this.labelCom);
+            this.panelCont.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCont.Location = new System.Drawing.Point(66, 138);
+            this.panelCont.Name = "panelCont";
+            this.panelCont.Size = new System.Drawing.Size(1123, 550);
+            this.panelCont.TabIndex = 8;
+            // 
+            // labelSimpleCarros
+            // 
+            this.labelSimpleCarros.AutoSize = true;
+            this.labelSimpleCarros.BackColor = System.Drawing.Color.Transparent;
+            this.labelSimpleCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimpleCarros.ForeColor = System.Drawing.Color.White;
+            this.labelSimpleCarros.Location = new System.Drawing.Point(963, 7);
+            this.labelSimpleCarros.Name = "labelSimpleCarros";
+            this.labelSimpleCarros.Size = new System.Drawing.Size(60, 20);
+            this.labelSimpleCarros.TabIndex = 6;
+            this.labelSimpleCarros.Text = "Carros:";
+            // 
+            // labelSimpleQWindowTittle
+            // 
+            this.labelSimpleQWindowTittle.AutoSize = true;
+            this.labelSimpleQWindowTittle.BackColor = System.Drawing.Color.Transparent;
+            this.labelSimpleQWindowTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSimpleQWindowTittle.ForeColor = System.Drawing.Color.White;
+            this.labelSimpleQWindowTittle.Location = new System.Drawing.Point(49, 7);
+            this.labelSimpleQWindowTittle.Name = "labelSimpleQWindowTittle";
+            this.labelSimpleQWindowTittle.Size = new System.Drawing.Size(215, 20);
+            this.labelSimpleQWindowTittle.TabIndex = 7;
+            this.labelSimpleQWindowTittle.Text = "Sistema de Conteo Vehicular";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelHeader.Controls.Add(this.pictureLogoApp);
+            this.panelHeader.Controls.Add(this.pictureFAClogo);
+            this.panelHeader.Controls.Add(this.labelHeaderSubtittle);
+            this.panelHeader.Controls.Add(this.labelHeaderTittle);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(66, 35);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(1123, 103);
+            this.panelHeader.TabIndex = 1;
+            // 
+            // pictureLogoApp
+            // 
+            this.pictureLogoApp.Image = ((System.Drawing.Image)(resources.GetObject("pictureLogoApp.Image")));
+            this.pictureLogoApp.Location = new System.Drawing.Point(31, 23);
+            this.pictureLogoApp.Name = "pictureLogoApp";
+            this.pictureLogoApp.Size = new System.Drawing.Size(59, 61);
+            this.pictureLogoApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureLogoApp.TabIndex = 20;
+            this.pictureLogoApp.TabStop = false;
+            // 
+            // pictureFAClogo
+            // 
+            this.pictureFAClogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureFAClogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureFAClogo.Image")));
+            this.pictureFAClogo.Location = new System.Drawing.Point(666, 4);
+            this.pictureFAClogo.Name = "pictureFAClogo";
+            this.pictureFAClogo.Size = new System.Drawing.Size(417, 94);
+            this.pictureFAClogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureFAClogo.TabIndex = 19;
+            this.pictureFAClogo.TabStop = false;
+            // 
+            // labelHeaderSubtittle
+            // 
+            this.labelHeaderSubtittle.AutoSize = true;
+            this.labelHeaderSubtittle.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeaderSubtittle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelHeaderSubtittle.Location = new System.Drawing.Point(102, 60);
+            this.labelHeaderSubtittle.Name = "labelHeaderSubtittle";
+            this.labelHeaderSubtittle.Size = new System.Drawing.Size(135, 29);
+            this.labelHeaderSubtittle.TabIndex = 18;
+            this.labelHeaderSubtittle.Text = "vehicular";
+            // 
+            // labelHeaderTittle
+            // 
+            this.labelHeaderTittle.AutoSize = true;
+            this.labelHeaderTittle.Font = new System.Drawing.Font("Montserrat", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeaderTittle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelHeaderTittle.Location = new System.Drawing.Point(96, 18);
+            this.labelHeaderTittle.Name = "labelHeaderTittle";
+            this.labelHeaderTittle.Size = new System.Drawing.Size(354, 42);
+            this.labelHeaderTittle.TabIndex = 17;
+            this.labelHeaderTittle.Text = "Sistema de conteo";
             // 
             // MainForm
             // 
@@ -313,21 +408,29 @@ namespace ContadorVehicular
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1189, 688);
             this.Controls.Add(this.panelCont);
+            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.BarraTittle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.BarraTittle.ResumeLayout(false);
+            this.BarraTittle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimiza)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelCont.ResumeLayout(false);
             this.panelCont.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimiza)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,7 +455,14 @@ namespace ContadorVehicular
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStatics;
         private System.Windows.Forms.Button btnSesion;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSimpleCarros;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelSimpleQWindowTittle;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.PictureBox pictureLogoApp;
+        private System.Windows.Forms.PictureBox pictureFAClogo;
+        private System.Windows.Forms.Label labelHeaderSubtittle;
+        private System.Windows.Forms.Label labelHeaderTittle;
     }
 }
 

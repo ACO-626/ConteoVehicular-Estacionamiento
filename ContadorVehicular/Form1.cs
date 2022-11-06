@@ -47,6 +47,7 @@ namespace ContadorVehicular
         {
             Thread Hilo = new Thread(EscuchaPuerto);
             Hilo.Start();
+            AbrirFormulario(new FormEstacionamiento());
         }
 
         #region MoverVentana
@@ -192,26 +193,38 @@ namespace ContadorVehicular
 
         #endregion
 
-        #region FormulariosHijos
+        #region PestañasBtns
         private void btnEstacionamiento_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormEstacionamiento());
+            labelHeaderTittle.Text = "Sistema de conteo";
+            labelHeaderSubtittle.Text = "vehicular";
         }
 
         private void btnStatics_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormStatics());
+            labelHeaderTittle.Text = "Estadística";
+            labelHeaderSubtittle.Text = "Análisis de datos";
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormSettings());
+            labelHeaderTittle.Text = "Ajustes";
+            labelHeaderSubtittle.Text = "Requiere identificación";
+
+
         }
 
         private void btnSesion_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new Inicio());
+            labelHeaderTittle.Text = "Sesión";
+            labelHeaderSubtittle.Text = "Identificación de trabajador";
         }
         #endregion
+
+       
     }
 }
