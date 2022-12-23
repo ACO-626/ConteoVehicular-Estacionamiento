@@ -29,19 +29,27 @@ namespace ContadorVehicular
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.simpleLabelGraficaAflu = new System.Windows.Forms.Label();
             this.chartAfluencia = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.simpleLabelTablaEve = new System.Windows.Forms.Label();
-            this.tableEvent1 = new System.Windows.Forms.DataGridView();
+            this.tablaRegistro = new System.Windows.Forms.DataGridView();
             this.simpleLabelRestantes = new System.Windows.Forms.Label();
             this.simpleLabelVehiculos = new System.Windows.Forms.Label();
             this.labelRestantes = new System.Windows.Forms.Label();
             this.labelEstacionados = new System.Windows.Forms.Label();
+            this.carIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estacionadoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaRegistroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+
             ((System.ComponentModel.ISupportInitialize)(this.chartAfluencia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableEvent1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingSource)).BeginInit();
+        
             this.SuspendLayout();
             // 
             // simpleLabelGraficaAflu
@@ -59,16 +67,16 @@ namespace ContadorVehicular
             // 
             this.chartAfluencia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chartAfluencia.BorderSkin.SkinStyle = System.Windows.Forms.DataVisualization.Charting.BorderSkinStyle.Emboss;
-            chartArea2.Name = "ChartArea1";
-            this.chartAfluencia.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartAfluencia.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartAfluencia.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartAfluencia.Legends.Add(legend1);
             this.chartAfluencia.Location = new System.Drawing.Point(12, 155);
             this.chartAfluencia.Name = "chartAfluencia";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartAfluencia.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartAfluencia.Series.Add(series1);
             this.chartAfluencia.Size = new System.Drawing.Size(621, 374);
             this.chartAfluencia.TabIndex = 16;
             this.chartAfluencia.Text = "chart1";
@@ -84,15 +92,24 @@ namespace ContadorVehicular
             this.simpleLabelTablaEve.TabIndex = 17;
             this.simpleLabelTablaEve.Text = "Tabla de evento";
             // 
-            // tableEvent1
+            // tablaRegistro
             // 
-            this.tableEvent1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableEvent1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.tableEvent1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableEvent1.Location = new System.Drawing.Point(651, 155);
-            this.tableEvent1.Name = "tableEvent1";
-            this.tableEvent1.Size = new System.Drawing.Size(334, 348);
-            this.tableEvent1.TabIndex = 18;
+            this.tablaRegistro.AllowUserToAddRows = false;
+            this.tablaRegistro.AllowUserToDeleteRows = false;
+            this.tablaRegistro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tablaRegistro.AutoGenerateColumns = false;
+            this.tablaRegistro.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.tablaRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.carIDDataGridViewTextBoxColumn,
+            this.estacionadoDataGridViewCheckBoxColumn,
+            this.horaDataGridViewTextBoxColumn});
+            this.tablaRegistro.DataSource = this.tablaRegistroBindingSource;
+            this.tablaRegistro.Location = new System.Drawing.Point(651, 155);
+            this.tablaRegistro.Name = "tablaRegistro";
+            this.tablaRegistro.ReadOnly = true;
+            this.tablaRegistro.Size = new System.Drawing.Size(334, 374);
+            this.tablaRegistro.TabIndex = 18;
             // 
             // simpleLabelRestantes
             // 
@@ -134,6 +151,37 @@ namespace ContadorVehicular
             this.labelEstacionados.TabIndex = 22;
             this.labelEstacionados.Text = "0";
             // 
+            // carIDDataGridViewTextBoxColumn
+            // 
+            this.carIDDataGridViewTextBoxColumn.DataPropertyName = "CarID";
+            this.carIDDataGridViewTextBoxColumn.HeaderText = "CarID";
+            this.carIDDataGridViewTextBoxColumn.Name = "carIDDataGridViewTextBoxColumn";
+            this.carIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estacionadoDataGridViewCheckBoxColumn
+            // 
+            this.estacionadoDataGridViewCheckBoxColumn.DataPropertyName = "Estacionado";
+            this.estacionadoDataGridViewCheckBoxColumn.HeaderText = "Estacionado";
+            this.estacionadoDataGridViewCheckBoxColumn.Name = "estacionadoDataGridViewCheckBoxColumn";
+            this.estacionadoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // horaDataGridViewTextBoxColumn
+            // 
+            this.horaDataGridViewTextBoxColumn.DataPropertyName = "Hora";
+            this.horaDataGridViewTextBoxColumn.HeaderText = "Hora";
+            this.horaDataGridViewTextBoxColumn.Name = "horaDataGridViewTextBoxColumn";
+            this.horaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tablaRegistroBindingSource
+            // 
+            this.tablaRegistroBindingSource.DataMember = "TablaRegistro";
+         
+            // 
+            // dB_EstacionamientoDataSet
+            // 
+
+            // 
+           
             // FormStatics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,15 +192,18 @@ namespace ContadorVehicular
             this.Controls.Add(this.labelRestantes);
             this.Controls.Add(this.simpleLabelVehiculos);
             this.Controls.Add(this.simpleLabelRestantes);
-            this.Controls.Add(this.tableEvent1);
+            this.Controls.Add(this.tablaRegistro);
             this.Controls.Add(this.simpleLabelTablaEve);
             this.Controls.Add(this.chartAfluencia);
             this.Controls.Add(this.simpleLabelGraficaAflu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormStatics";
             this.Text = "FormStatics";
+            this.Load += new System.EventHandler(this.FormStatics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartAfluencia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableEvent1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingSource)).EndInit();
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,10 +214,14 @@ namespace ContadorVehicular
         private System.Windows.Forms.Label simpleLabelGraficaAflu;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartAfluencia;
         private System.Windows.Forms.Label simpleLabelTablaEve;
-        private System.Windows.Forms.DataGridView tableEvent1;
+        private System.Windows.Forms.DataGridView tablaRegistro;
         private System.Windows.Forms.Label simpleLabelRestantes;
         private System.Windows.Forms.Label simpleLabelVehiculos;
         private System.Windows.Forms.Label labelRestantes;
         private System.Windows.Forms.Label labelEstacionados;
+        private System.Windows.Forms.BindingSource tablaRegistroBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn estacionadoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
     }
 }

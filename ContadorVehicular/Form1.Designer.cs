@@ -29,6 +29,7 @@ namespace ContadorVehicular
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelCom = new System.Windows.Forms.Label();
             this.labelCounterCar = new System.Windows.Forms.Label();
@@ -51,11 +52,26 @@ namespace ContadorVehicular
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEstacionamiento = new System.Windows.Forms.Button();
             this.panelCont = new System.Windows.Forms.Panel();
+            this.tablaRegistroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablaConteoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pictureLogoApp = new System.Windows.Forms.PictureBox();
             this.pictureFAClogo = new System.Windows.Forms.PictureBox();
             this.labelHeaderSubtittle = new System.Windows.Forms.Label();
             this.labelHeaderTittle = new System.Windows.Forms.Label();
+            this.tablaRegistroBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tablaRegistroBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.BarraTittle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
@@ -64,9 +80,13 @@ namespace ContadorVehicular
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelCont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaConteoBindingSource)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingNavigator)).BeginInit();
+            this.tablaRegistroBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCom
@@ -75,7 +95,7 @@ namespace ContadorVehicular
             this.labelCom.AutoSize = true;
             this.labelCom.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labelCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCom.Location = new System.Drawing.Point(3, 510);
+            this.labelCom.Location = new System.Drawing.Point(3, 545);
             this.labelCom.Name = "labelCom";
             this.labelCom.Size = new System.Drawing.Size(87, 25);
             this.labelCom.TabIndex = 0;
@@ -183,7 +203,7 @@ namespace ContadorVehicular
             this.btnMax2.TabIndex = 4;
             this.btnMax2.TabStop = false;
             this.btnMax2.Visible = false;
-            this.btnMax2.Click += new System.EventHandler(this.btnMax2_Click);
+            this.btnMax2.Click += new System.EventHandler(this.BtnMax2_Click);
             // 
             // btnMinimiza
             // 
@@ -196,7 +216,7 @@ namespace ContadorVehicular
             this.btnMinimiza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMinimiza.TabIndex = 3;
             this.btnMinimiza.TabStop = false;
-            this.btnMinimiza.Click += new System.EventHandler(this.btnMinimiza_Click);
+            this.btnMinimiza.Click += new System.EventHandler(this.BtnMinimiza_Click);
             // 
             // btnMax
             // 
@@ -209,7 +229,7 @@ namespace ContadorVehicular
             this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMax.TabIndex = 2;
             this.btnMax.TabStop = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            this.btnMax.Click += new System.EventHandler(this.BtnMax_Click);
             // 
             // btnClose
             // 
@@ -222,7 +242,7 @@ namespace ContadorVehicular
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // panelMenu
             // 
@@ -237,7 +257,7 @@ namespace ContadorVehicular
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 35);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(66, 653);
+            this.panelMenu.Size = new System.Drawing.Size(66, 688);
             this.panelMenu.TabIndex = 7;
             // 
             // btnSesion
@@ -256,7 +276,7 @@ namespace ContadorVehicular
             this.btnSesion.Size = new System.Drawing.Size(66, 71);
             this.btnSesion.TabIndex = 5;
             this.btnSesion.UseVisualStyleBackColor = false;
-            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
+            this.btnSesion.Click += new System.EventHandler(this.BtnSesion_Click);
             // 
             // panel3
             // 
@@ -282,7 +302,7 @@ namespace ContadorVehicular
             this.btnSettings.Size = new System.Drawing.Size(66, 71);
             this.btnSettings.TabIndex = 4;
             this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // panel2
             // 
@@ -308,7 +328,7 @@ namespace ContadorVehicular
             this.btnStatics.Size = new System.Drawing.Size(66, 71);
             this.btnStatics.TabIndex = 2;
             this.btnStatics.UseVisualStyleBackColor = false;
-            this.btnStatics.Click += new System.EventHandler(this.btnStatics_Click);
+            this.btnStatics.Click += new System.EventHandler(this.BtnStatics_Click);
             // 
             // panel1
             // 
@@ -334,7 +354,7 @@ namespace ContadorVehicular
             this.btnEstacionamiento.TabIndex = 0;
             this.btnEstacionamiento.Text = "E";
             this.btnEstacionamiento.UseVisualStyleBackColor = false;
-            this.btnEstacionamiento.Click += new System.EventHandler(this.btnEstacionamiento_Click);
+            this.btnEstacionamiento.Click += new System.EventHandler(this.BtnEstacionamiento_Click);
             // 
             // panelCont
             // 
@@ -342,8 +362,16 @@ namespace ContadorVehicular
             this.panelCont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCont.Location = new System.Drawing.Point(66, 138);
             this.panelCont.Name = "panelCont";
-            this.panelCont.Size = new System.Drawing.Size(1123, 550);
+            this.panelCont.Size = new System.Drawing.Size(1123, 585);
             this.panelCont.TabIndex = 8;
+            // 
+            // tablaRegistroBindingSource
+            // 
+            this.tablaRegistroBindingSource.DataMember = "TablaRegistro";
+            // 
+            // tablaConteoBindingSource
+            // 
+            this.tablaConteoBindingSource.DataMember = "TablaConteo";
             // 
             // panelHeader
             // 
@@ -401,12 +429,138 @@ namespace ContadorVehicular
             this.labelHeaderTittle.TabIndex = 17;
             this.labelHeaderTittle.Text = "Sistema de conteo";
             // 
+            // tablaRegistroBindingNavigator
+            // 
+            this.tablaRegistroBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.tablaRegistroBindingNavigator.BindingSource = this.tablaRegistroBindingSource;
+            this.tablaRegistroBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.tablaRegistroBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.tablaRegistroBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.tablaRegistroBindingNavigatorSaveItem});
+            this.tablaRegistroBindingNavigator.Location = new System.Drawing.Point(66, 138);
+            this.tablaRegistroBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.tablaRegistroBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.tablaRegistroBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.tablaRegistroBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.tablaRegistroBindingNavigator.Name = "tablaRegistroBindingNavigator";
+            this.tablaRegistroBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.tablaRegistroBindingNavigator.Size = new System.Drawing.Size(1123, 25);
+            this.tablaRegistroBindingNavigator.TabIndex = 9;
+            this.tablaRegistroBindingNavigator.Text = "bindingNavigator1";
+            this.tablaRegistroBindingNavigator.Visible = false;
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tablaRegistroBindingNavigatorSaveItem
+            // 
+            this.tablaRegistroBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tablaRegistroBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tablaRegistroBindingNavigatorSaveItem.Image")));
+            this.tablaRegistroBindingNavigatorSaveItem.Name = "tablaRegistroBindingNavigatorSaveItem";
+            this.tablaRegistroBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.tablaRegistroBindingNavigatorSaveItem.Text = "Guardar datos";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1189, 688);
+            this.ClientSize = new System.Drawing.Size(1189, 723);
+            this.Controls.Add(this.tablaRegistroBindingNavigator);
             this.Controls.Add(this.panelCont);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
@@ -427,11 +581,17 @@ namespace ContadorVehicular
             this.panelMenu.ResumeLayout(false);
             this.panelCont.ResumeLayout(false);
             this.panelCont.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaConteoBindingSource)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingNavigator)).EndInit();
+            this.tablaRegistroBindingNavigator.ResumeLayout(false);
+            this.tablaRegistroBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -463,6 +623,25 @@ namespace ContadorVehicular
         private System.Windows.Forms.PictureBox pictureFAClogo;
         private System.Windows.Forms.Label labelHeaderSubtittle;
         private System.Windows.Forms.Label labelHeaderTittle;
+        private System.Windows.Forms.BindingSource tablaRegistroBindingSource;
+        private System.Windows.Forms.BindingNavigator tablaRegistroBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton tablaRegistroBindingNavigatorSaveItem;
+        private System.Windows.Forms.BindingSource tablaConteoBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
 

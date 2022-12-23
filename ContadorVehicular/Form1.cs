@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
 
@@ -15,24 +11,26 @@ namespace ContadorVehicular
 {
     public partial class MainForm : Form
     {
-        #region OBJETOS Y VARIABLES
-
-        bool endConection = false; //Bandera de conexión
-        bool salida;  //VAriable 
-
+        #region ObjetosYvariables
+        string pathBDRegistro = "Tabla_de_Registros.txt";
+        string pathBDConteo = "Conteo_de_vehículos.txt";
+        string pathBDCapacity = "Est_Capacaity.txt";
+        
+        bool endConection = false; //Bandera de comunicación serial
+        bool salida;               //Variable que indica si el auto va de salida
+        //string textEvento;         //Mensaje de comunicación serial 
 
 
         System.IO.Ports.SerialPort puerto = new System.IO.Ports.SerialPort(); //Instancia de la clase puerto
         List<string> listaEstacionamiento = new List<string>();  //Lista donde se almacenan los ID de los carros
-        int ingresos = 0;
-        int cupo = 257;
+        int ingresos = 0;   //Carros ingresados
+        int cupo = 257;     //Capacidad estacionamiento
         #endregion
-
         #region Inicializar
         public MainForm()
         {
             InitializeComponent();     //Método de inicialización de Form
-            puerto.PortName = "COM3";  //Indicación de puerto por defecto
+            puerto.PortName = "COM5";  //Indicación de puerto por defecto
             puerto.BaudRate = 9600;    //Indicación de la velocidad de comunicación 
             puerto.ReadTimeout = 500;  //Tiempo de espera para periodo de espera en lectura
             try
@@ -44,9 +42,10 @@ namespace ContadorVehicular
 
         }
         private void Form1_Load(object sender, EventArgs e)
-        {
-            Thread Hilo = new Thread(EscuchaPuerto);
-            Hilo.Start();
+        {          
+            
+            Thread Hilo = new Thread(EscuchaPuerto); //Se crea hilo de escucha de puerto
+            Hilo.Start(); //Se inicia hilo
             AbrirFormulario(new FormEstacionamiento());
         }
 
@@ -59,8 +58,7 @@ namespace ContadorVehicular
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
         #endregion
-
-        #region MetodoEscuchaPuerto
+ #region MetodoEscuchaPuerto
         private void EscuchaPuerto() //método escuchar puerto para ejecutar en un hilo
         {
             while(!endConection) //Mientra no termine la conexión
@@ -72,6 +70,7 @@ namespace ContadorVehicular
                     labelCom.Invoke(new MethodInvoker( 
                         delegate
                         {
+                            #region GuardadoEnRam
                             foreach (var i in listaEstacionamiento)
                             {
                                 if(i == cadena)
@@ -86,6 +85,8 @@ namespace ContadorVehicular
                                 ingresos--;
                                 labelCounterCar.Text = ingresos.ToString();
                                 salida = false;
+                                RegistrarBD(cadena,"salida ",pathBDRegistro);
+                                ReplaceValueBD(ingresos.ToString(), pathBDConteo);
                             }
                             else
                             {
@@ -93,10 +94,12 @@ namespace ContadorVehicular
                                 labelCom.Text = "entrada" + cadena;
                                 ingresos++;
                                 labelCounterCar.Text = ingresos.ToString();
+                                RegistrarBD(cadena, "entrada",pathBDRegistro);
+                                ReplaceValueBD(ingresos.ToString(),pathBDConteo);
                             }
 
                             labelEspacios.Text = (cupo - ingresos).ToString();
- 
+                            #endregion                           
                         }
                         ));
                     
@@ -106,7 +109,6 @@ namespace ContadorVehicular
         }
 
         #endregion
-
         #region CloseAPP
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -118,21 +120,20 @@ namespace ContadorVehicular
         }
 
        
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         #endregion
-
-        #region BARRAVentana
+        #region BarraVentana
         #region Maximizar
-        private void btnMax_Click(object sender, EventArgs e)
+        private void BtnMax_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             btnMax.Visible = false;
             btnMax2.Visible = true;
         }
-        private void btnMax2_Click(object sender, EventArgs e)
+        private void BtnMax2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             btnMax.Visible = true;
@@ -143,7 +144,7 @@ namespace ContadorVehicular
         #region Minimizar
 
 
-        private void btnMinimiza_Click(object sender, EventArgs e)
+        private void BtnMinimiza_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -154,7 +155,6 @@ namespace ContadorVehicular
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
-
         #region Formularios hijos
 
         private Form activeForm = null;
@@ -192,9 +192,8 @@ namespace ContadorVehicular
 
 
         #endregion
-
         #region PestañasBtns
-        private void btnEstacionamiento_Click(object sender, EventArgs e)
+        private void BtnEstacionamiento_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormEstacionamiento());
             labelHeaderTittle.Text = "Sistema de conteo";
@@ -207,7 +206,7 @@ namespace ContadorVehicular
             btnEstacionamiento.BackColor = Color.FromArgb(205, 23, 30);
         }
 
-        private void btnStatics_Click(object sender, EventArgs e)
+        private void BtnStatics_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormStatics());
             labelHeaderTittle.Text = "Estadística";
@@ -218,7 +217,7 @@ namespace ContadorVehicular
             btnStatics.BackColor = Color.FromArgb(205, 23, 30);
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void BtnSettings_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new FormSettings());
             labelHeaderTittle.Text = "Ajustes";
@@ -230,7 +229,7 @@ namespace ContadorVehicular
 
         }
 
-        private void btnSesion_Click(object sender, EventArgs e)
+        private void BtnSesion_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new Inicio());
             labelHeaderTittle.Text = "Sesión";
@@ -242,8 +241,27 @@ namespace ContadorVehicular
             btnSesion.BackColor = Color.FromArgb(205, 23, 30);
         }
 
-        #endregion
 
-       
+        #endregion
+        #region EscribirBD
+
+        private void RegistrarBD(string id, string evento, string bdPath)
+        {
+            id = id.Replace("\r", "");
+            StreamWriter writer = File.AppendText(bdPath);
+            writer.WriteLine(id + "        " + evento + "        " + DateTime.Now.ToString());
+            writer.Close();
+            MessageBox.Show("Datos guardados de registro", "datos guardados");
+        }
+        #endregion
+        #region makeCount
+        private void ReplaceValueBD(string text, string bdPath)
+        {
+            TextWriter textWriter = new StreamWriter(bdPath);
+            textWriter.WriteLine(text);
+            textWriter.Close();
+            MessageBox.Show("Datos guardados de conteo", "datos guardados");
+        }
+        #endregion
     }
 }

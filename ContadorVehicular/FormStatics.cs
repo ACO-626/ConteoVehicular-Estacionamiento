@@ -16,5 +16,13 @@ namespace ContadorVehicular
         {
             InitializeComponent();
         }
+
+        private void FormStatics_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dB_EstacionamientoDataSet.TablaRegistro' Puede moverla o quitarla según sea necesario.
+
+            
+
+        }
     }
 }
