@@ -29,7 +29,6 @@ namespace ContadorVehicular
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelCom = new System.Windows.Forms.Label();
             this.labelCounterCar = new System.Windows.Forms.Label();
@@ -52,26 +51,36 @@ namespace ContadorVehicular
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEstacionamiento = new System.Windows.Forms.Button();
             this.panelCont = new System.Windows.Forms.Panel();
-            this.tablaRegistroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tablaConteoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pictureLogoApp = new System.Windows.Forms.PictureBox();
             this.pictureFAClogo = new System.Windows.Forms.PictureBox();
             this.labelHeaderSubtittle = new System.Windows.Forms.Label();
             this.labelHeaderTittle = new System.Windows.Forms.Label();
-            this.tablaRegistroBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tablaRegistroBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bDRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bDIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bDCapacidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puertoLectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dosLectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puertoIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puertoSalidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.establecerAUnSensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.establecerADosSensoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarSalidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.modificarCapacidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reiniciarConteoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnManualPlus = new System.Windows.Forms.Button();
+            this.btnManualLess = new System.Windows.Forms.Button();
             this.BarraTittle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
@@ -80,13 +89,10 @@ namespace ContadorVehicular
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panelCont.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaConteoBindingSource)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingNavigator)).BeginInit();
-            this.tablaRegistroBindingNavigator.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCom
@@ -95,7 +101,7 @@ namespace ContadorVehicular
             this.labelCom.AutoSize = true;
             this.labelCom.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labelCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCom.Location = new System.Drawing.Point(3, 545);
+            this.labelCom.Location = new System.Drawing.Point(3, 510);
             this.labelCom.Name = "labelCom";
             this.labelCom.Size = new System.Drawing.Size(87, 25);
             this.labelCom.TabIndex = 0;
@@ -247,17 +253,19 @@ namespace ContadorVehicular
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.panelMenu.Controls.Add(this.btnSesion);
+            this.panelMenu.Controls.Add(this.btnManualLess);
+            this.panelMenu.Controls.Add(this.btnManualPlus);
             this.panelMenu.Controls.Add(this.panel3);
             this.panelMenu.Controls.Add(this.btnSettings);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.btnStatics);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Controls.Add(this.btnEstacionamiento);
+            this.panelMenu.Controls.Add(this.btnSesion);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 35);
+            this.panelMenu.Location = new System.Drawing.Point(0, 59);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(66, 688);
+            this.panelMenu.Size = new System.Drawing.Size(66, 664);
             this.panelMenu.TabIndex = 7;
             // 
             // btnSesion
@@ -271,17 +279,18 @@ namespace ContadorVehicular
             this.btnSesion.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSesion.ForeColor = System.Drawing.Color.White;
             this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
-            this.btnSesion.Location = new System.Drawing.Point(0, 36);
+            this.btnSesion.Location = new System.Drawing.Point(0, 6);
             this.btnSesion.Name = "btnSesion";
             this.btnSesion.Size = new System.Drawing.Size(66, 71);
             this.btnSesion.TabIndex = 5;
             this.btnSesion.UseVisualStyleBackColor = false;
+            this.btnSesion.Visible = false;
             this.btnSesion.Click += new System.EventHandler(this.BtnSesion_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.panel3.Location = new System.Drawing.Point(-2, 537);
+            this.panel3.Location = new System.Drawing.Point(-2, 579);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(8, 71);
             this.panel3.TabIndex = 3;
@@ -297,7 +306,7 @@ namespace ContadorVehicular
             this.btnSettings.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(0, 537);
+            this.btnSettings.Location = new System.Drawing.Point(0, 579);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(66, 71);
             this.btnSettings.TabIndex = 4;
@@ -307,7 +316,7 @@ namespace ContadorVehicular
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.panel2.Location = new System.Drawing.Point(-2, 414);
+            this.panel2.Location = new System.Drawing.Point(-2, 456);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(8, 71);
             this.panel2.TabIndex = 1;
@@ -323,7 +332,7 @@ namespace ContadorVehicular
             this.btnStatics.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatics.ForeColor = System.Drawing.Color.White;
             this.btnStatics.Image = ((System.Drawing.Image)(resources.GetObject("btnStatics.Image")));
-            this.btnStatics.Location = new System.Drawing.Point(0, 414);
+            this.btnStatics.Location = new System.Drawing.Point(0, 456);
             this.btnStatics.Name = "btnStatics";
             this.btnStatics.Size = new System.Drawing.Size(66, 71);
             this.btnStatics.TabIndex = 2;
@@ -333,7 +342,7 @@ namespace ContadorVehicular
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.panel1.Location = new System.Drawing.Point(0, 287);
+            this.panel1.Location = new System.Drawing.Point(0, 329);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(8, 71);
             this.panel1.TabIndex = 0;
@@ -348,7 +357,7 @@ namespace ContadorVehicular
             this.btnEstacionamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstacionamiento.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstacionamiento.ForeColor = System.Drawing.Color.White;
-            this.btnEstacionamiento.Location = new System.Drawing.Point(2, 287);
+            this.btnEstacionamiento.Location = new System.Drawing.Point(2, 329);
             this.btnEstacionamiento.Name = "btnEstacionamiento";
             this.btnEstacionamiento.Size = new System.Drawing.Size(66, 71);
             this.btnEstacionamiento.TabIndex = 0;
@@ -360,18 +369,10 @@ namespace ContadorVehicular
             // 
             this.panelCont.Controls.Add(this.labelCom);
             this.panelCont.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCont.Location = new System.Drawing.Point(66, 138);
+            this.panelCont.Location = new System.Drawing.Point(66, 173);
             this.panelCont.Name = "panelCont";
-            this.panelCont.Size = new System.Drawing.Size(1123, 585);
+            this.panelCont.Size = new System.Drawing.Size(1123, 550);
             this.panelCont.TabIndex = 8;
-            // 
-            // tablaRegistroBindingSource
-            // 
-            this.tablaRegistroBindingSource.DataMember = "TablaRegistro";
-            // 
-            // tablaConteoBindingSource
-            // 
-            this.tablaConteoBindingSource.DataMember = "TablaConteo";
             // 
             // panelHeader
             // 
@@ -381,9 +382,9 @@ namespace ContadorVehicular
             this.panelHeader.Controls.Add(this.labelHeaderSubtittle);
             this.panelHeader.Controls.Add(this.labelHeaderTittle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(66, 35);
+            this.panelHeader.Location = new System.Drawing.Point(66, 59);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1123, 103);
+            this.panelHeader.Size = new System.Drawing.Size(1123, 114);
             this.panelHeader.TabIndex = 1;
             // 
             // pictureLogoApp
@@ -429,130 +430,214 @@ namespace ContadorVehicular
             this.labelHeaderTittle.TabIndex = 17;
             this.labelHeaderTittle.Text = "Sistema de conteo";
             // 
-            // tablaRegistroBindingNavigator
+            // menuStrip1
             // 
-            this.tablaRegistroBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.tablaRegistroBindingNavigator.BindingSource = this.tablaRegistroBindingSource;
-            this.tablaRegistroBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tablaRegistroBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.tablaRegistroBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.tablaRegistroBindingNavigatorSaveItem});
-            this.tablaRegistroBindingNavigator.Location = new System.Drawing.Point(66, 138);
-            this.tablaRegistroBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tablaRegistroBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tablaRegistroBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tablaRegistroBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tablaRegistroBindingNavigator.Name = "tablaRegistroBindingNavigator";
-            this.tablaRegistroBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tablaRegistroBindingNavigator.Size = new System.Drawing.Size(1123, 25);
-            this.tablaRegistroBindingNavigator.TabIndex = 9;
-            this.tablaRegistroBindingNavigator.Text = "bindingNavigator1";
-            this.tablaRegistroBindingNavigator.Visible = false;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.editarToolStripMenuItem,
+            this.configuraciónToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 35);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1189, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // bindingNavigatorAddNewItem
+            // archivoToolStripMenuItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarBaseDeDatosToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // bindingNavigatorCountItem
+            // editarToolStripMenuItem
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarIngresoToolStripMenuItem,
+            this.registrarSalidaToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.modificarCapacidadToolStripMenuItem,
+            this.reiniciarConteoToolStripMenuItem});
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editarToolStripMenuItem.Text = "Editar";
             // 
-            // bindingNavigatorDeleteItem
+            // configuraciónToolStripMenuItem
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sensorToolStripMenuItem,
+            this.dosLectoresToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.establecerAUnSensorToolStripMenuItem,
+            this.establecerADosSensoresToolStripMenuItem});
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
-            // bindingNavigatorMoveFirstItem
+            // ayudaToolStripMenuItem
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.githubToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
-            // bindingNavigatorMovePreviousItem
+            // mostrarBaseDeDatosToolStripMenuItem
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            this.mostrarBaseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bDRegistrosToolStripMenuItem,
+            this.bDIngresosToolStripMenuItem,
+            this.bDCapacidadToolStripMenuItem});
+            this.mostrarBaseDeDatosToolStripMenuItem.Name = "mostrarBaseDeDatosToolStripMenuItem";
+            this.mostrarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.mostrarBaseDeDatosToolStripMenuItem.Text = "Mostrar Base de Datos";
             // 
-            // bindingNavigatorSeparator
+            // bDRegistrosToolStripMenuItem
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bDRegistrosToolStripMenuItem.Name = "bDRegistrosToolStripMenuItem";
+            this.bDRegistrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDRegistrosToolStripMenuItem.Text = "BD-Registros";
+            this.bDRegistrosToolStripMenuItem.Click += new System.EventHandler(this.bDRegistrosToolStripMenuItem_Click);
             // 
-            // bindingNavigatorPositionItem
+            // bDIngresosToolStripMenuItem
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            this.bDIngresosToolStripMenuItem.Name = "bDIngresosToolStripMenuItem";
+            this.bDIngresosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDIngresosToolStripMenuItem.Text = "BD-Ingresos";
+            this.bDIngresosToolStripMenuItem.Click += new System.EventHandler(this.bDIngresosToolStripMenuItem_Click);
             // 
-            // bindingNavigatorSeparator1
+            // bDCapacidadToolStripMenuItem
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bDCapacidadToolStripMenuItem.Name = "bDCapacidadToolStripMenuItem";
+            this.bDCapacidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDCapacidadToolStripMenuItem.Text = "BD-Capacidad";
+            this.bDCapacidadToolStripMenuItem.Click += new System.EventHandler(this.bDCapacidadToolStripMenuItem_Click);
             // 
-            // bindingNavigatorMoveNextItem
+            // sensorToolStripMenuItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            this.sensorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.puertoLectorToolStripMenuItem});
+            this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.sensorToolStripMenuItem.Text = "Un lector";
             // 
-            // bindingNavigatorMoveLastItem
+            // puertoLectorToolStripMenuItem
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            this.puertoLectorToolStripMenuItem.Name = "puertoLectorToolStripMenuItem";
+            this.puertoLectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puertoLectorToolStripMenuItem.Text = "Puerto lector";
             // 
-            // bindingNavigatorSeparator2
+            // dosLectoresToolStripMenuItem
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.dosLectoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.puertoIngresoToolStripMenuItem,
+            this.puertoSalidaToolStripMenuItem});
+            this.dosLectoresToolStripMenuItem.Name = "dosLectoresToolStripMenuItem";
+            this.dosLectoresToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.dosLectoresToolStripMenuItem.Text = "Dos lectores";
             // 
-            // tablaRegistroBindingNavigatorSaveItem
+            // puertoIngresoToolStripMenuItem
             // 
-            this.tablaRegistroBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tablaRegistroBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tablaRegistroBindingNavigatorSaveItem.Image")));
-            this.tablaRegistroBindingNavigatorSaveItem.Name = "tablaRegistroBindingNavigatorSaveItem";
-            this.tablaRegistroBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.tablaRegistroBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.puertoIngresoToolStripMenuItem.Name = "puertoIngresoToolStripMenuItem";
+            this.puertoIngresoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puertoIngresoToolStripMenuItem.Text = "Puerto Ingreso";
+            // 
+            // puertoSalidaToolStripMenuItem
+            // 
+            this.puertoSalidaToolStripMenuItem.Name = "puertoSalidaToolStripMenuItem";
+            this.puertoSalidaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puertoSalidaToolStripMenuItem.Text = "Puerto Salida";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            // 
+            // establecerAUnSensorToolStripMenuItem
+            // 
+            this.establecerAUnSensorToolStripMenuItem.Name = "establecerAUnSensorToolStripMenuItem";
+            this.establecerAUnSensorToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.establecerAUnSensorToolStripMenuItem.Text = "Establecer a un sensor";
+            // 
+            // establecerADosSensoresToolStripMenuItem
+            // 
+            this.establecerADosSensoresToolStripMenuItem.Name = "establecerADosSensoresToolStripMenuItem";
+            this.establecerADosSensoresToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.establecerADosSensoresToolStripMenuItem.Text = "Establecer a dos sensores";
+            // 
+            // githubToolStripMenuItem
+            // 
+            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubToolStripMenuItem.Text = "Github";
+            // 
+            // registrarIngresoToolStripMenuItem
+            // 
+            this.registrarIngresoToolStripMenuItem.Name = "registrarIngresoToolStripMenuItem";
+            this.registrarIngresoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.registrarIngresoToolStripMenuItem.Text = "Registrar ingreso";
+            this.registrarIngresoToolStripMenuItem.Click += new System.EventHandler(this.registrarIngresoToolStripMenuItem_Click);
+            // 
+            // registrarSalidaToolStripMenuItem
+            // 
+            this.registrarSalidaToolStripMenuItem.Name = "registrarSalidaToolStripMenuItem";
+            this.registrarSalidaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.registrarSalidaToolStripMenuItem.Text = "Registrar salida";
+            this.registrarSalidaToolStripMenuItem.Click += new System.EventHandler(this.registrarSalidaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(179, 6);
+            // 
+            // modificarCapacidadToolStripMenuItem
+            // 
+            this.modificarCapacidadToolStripMenuItem.Name = "modificarCapacidadToolStripMenuItem";
+            this.modificarCapacidadToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.modificarCapacidadToolStripMenuItem.Text = "Modificar capacidad";
+            // 
+            // reiniciarConteoToolStripMenuItem
+            // 
+            this.reiniciarConteoToolStripMenuItem.Name = "reiniciarConteoToolStripMenuItem";
+            this.reiniciarConteoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.reiniciarConteoToolStripMenuItem.Text = "Reiniciar conteo";
+            // 
+            // btnManualPlus
+            // 
+            this.btnManualPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnManualPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManualPlus.FlatAppearance.BorderSize = 0;
+            this.btnManualPlus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.btnManualPlus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnManualPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualPlus.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManualPlus.ForeColor = System.Drawing.Color.Transparent;
+            this.btnManualPlus.Image = ((System.Drawing.Image)(resources.GetObject("btnManualPlus.Image")));
+            this.btnManualPlus.Location = new System.Drawing.Point(0, 111);
+            this.btnManualPlus.Name = "btnManualPlus";
+            this.btnManualPlus.Size = new System.Drawing.Size(66, 71);
+            this.btnManualPlus.TabIndex = 6;
+            this.btnManualPlus.UseVisualStyleBackColor = false;
+            this.btnManualPlus.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnManualPlus_MouseUp);
+            // 
+            // btnManualLess
+            // 
+            this.btnManualLess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnManualLess.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManualLess.FlatAppearance.BorderSize = 0;
+            this.btnManualLess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.btnManualLess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnManualLess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualLess.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManualLess.ForeColor = System.Drawing.Color.White;
+            this.btnManualLess.Image = ((System.Drawing.Image)(resources.GetObject("btnManualLess.Image")));
+            this.btnManualLess.Location = new System.Drawing.Point(0, 216);
+            this.btnManualLess.Name = "btnManualLess";
+            this.btnManualLess.Size = new System.Drawing.Size(66, 71);
+            this.btnManualLess.TabIndex = 7;
+            this.btnManualLess.UseVisualStyleBackColor = false;
+            this.btnManualLess.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnManualLess_MouseUp);
             // 
             // MainForm
             // 
@@ -560,10 +645,10 @@ namespace ContadorVehicular
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1189, 723);
-            this.Controls.Add(this.tablaRegistroBindingNavigator);
             this.Controls.Add(this.panelCont);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BarraTittle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -581,15 +666,12 @@ namespace ContadorVehicular
             this.panelMenu.ResumeLayout(false);
             this.panelCont.ResumeLayout(false);
             this.panelCont.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaConteoBindingSource)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFAClogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaRegistroBindingNavigator)).EndInit();
-            this.tablaRegistroBindingNavigator.ResumeLayout(false);
-            this.tablaRegistroBindingNavigator.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,25 +705,35 @@ namespace ContadorVehicular
         private System.Windows.Forms.PictureBox pictureFAClogo;
         private System.Windows.Forms.Label labelHeaderSubtittle;
         private System.Windows.Forms.Label labelHeaderTittle;
-        private System.Windows.Forms.BindingSource tablaRegistroBindingSource;
-        private System.Windows.Forms.BindingNavigator tablaRegistroBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton tablaRegistroBindingNavigatorSaveItem;
-        private System.Windows.Forms.BindingSource tablaConteoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bDRegistrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bDIngresosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bDCapacidadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sensorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puertoLectorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dosLectoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puertoIngresoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puertoSalidaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem establecerAUnSensorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem establecerADosSensoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarIngresoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarSalidaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem modificarCapacidadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reiniciarConteoToolStripMenuItem;
+        private System.Windows.Forms.Button btnManualLess;
+        private System.Windows.Forms.Button btnManualPlus;
     }
 }
 

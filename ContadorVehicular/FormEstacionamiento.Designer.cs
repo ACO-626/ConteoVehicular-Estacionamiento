@@ -30,26 +30,26 @@ namespace ContadorVehicular
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEstacionamiento));
-            this.label2 = new System.Windows.Forms.Label();
+            this.SimpleLabelRest = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelEspacios = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelIngresos = new System.Windows.Forms.Label();
+            this.SimpleLabelEstacionados = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // SimpleLabelRest
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 426);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(398, 49);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Espacios restantes";
+            this.SimpleLabelRest.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SimpleLabelRest.AutoSize = true;
+            this.SimpleLabelRest.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleLabelRest.Location = new System.Drawing.Point(63, 426);
+            this.SimpleLabelRest.Name = "SimpleLabelRest";
+            this.SimpleLabelRest.Size = new System.Drawing.Size(398, 49);
+            this.SimpleLabelRest.TabIndex = 12;
+            this.SimpleLabelRest.Text = "Espacios restantes";
             // 
             // panel2
             // 
@@ -72,31 +72,31 @@ namespace ContadorVehicular
             this.labelEspacios.Text = "274";
             this.labelEspacios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // labelIngresos
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(635, 181);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 122);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "000";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelIngresos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelIngresos.AutoSize = true;
+            this.labelIngresos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.labelIngresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelIngresos.Font = new System.Drawing.Font("Montserrat", 75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIngresos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelIngresos.Location = new System.Drawing.Point(635, 181);
+            this.labelIngresos.Name = "labelIngresos";
+            this.labelIngresos.Size = new System.Drawing.Size(262, 122);
+            this.labelIngresos.TabIndex = 13;
+            this.labelIngresos.Text = "000";
+            this.labelIngresos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label4
+            // SimpleLabelEstacionados
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(577, 426);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(496, 49);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Vehiculos estacionados";
+            this.SimpleLabelEstacionados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SimpleLabelEstacionados.AutoSize = true;
+            this.SimpleLabelEstacionados.Font = new System.Drawing.Font("Montserrat", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimpleLabelEstacionados.Location = new System.Drawing.Point(577, 426);
+            this.SimpleLabelEstacionados.Name = "SimpleLabelEstacionados";
+            this.SimpleLabelEstacionados.Size = new System.Drawing.Size(496, 49);
+            this.SimpleLabelEstacionados.TabIndex = 14;
+            this.SimpleLabelEstacionados.Text = "Vehiculos estacionados";
             // 
             // pictureBox2
             // 
@@ -123,11 +123,11 @@ namespace ContadorVehicular
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1123, 559);
+            this.ClientSize = new System.Drawing.Size(1123, 592);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SimpleLabelEstacionados);
+            this.Controls.Add(this.labelIngresos);
+            this.Controls.Add(this.SimpleLabelRest);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelEspacios);
             this.Controls.Add(this.pictureBox2);
@@ -142,11 +142,11 @@ namespace ContadorVehicular
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label SimpleLabelRest;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelEspacios;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelIngresos;
+        private System.Windows.Forms.Label SimpleLabelEstacionados;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
     }

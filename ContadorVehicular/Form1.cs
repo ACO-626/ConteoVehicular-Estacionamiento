@@ -6,6 +6,8 @@ using System.IO.Ports;
 using System.IO;
 using System.Threading;
 using System.Runtime.InteropServices;
+using System.Media;
+using System.Diagnostics;
 
 namespace ContadorVehicular
 {
@@ -15,22 +17,45 @@ namespace ContadorVehicular
         string pathBDRegistro = "Tabla_de_Registros.txt";
         string pathBDConteo = "Conteo_de_vehículos.txt";
         string pathBDCapacity = "Est_Capacaity.txt";
-        
+
+        FormEstacionamiento formEstacionamiento;
+        FormSettings formSettings;
+        FormStatics formStatics;
+        Inicio formInicio;
+
+        bool tabEstacionamiento;
+        bool tabAjustes;
+        bool tabStatics;
+        bool tabInicio;
+
+        SoundPlayer regisBeep = new SoundPlayer();
+        SoundPlayer  salidaBeep = new SoundPlayer();
+        SoundPlayer regisBeepRnd = new SoundPlayer();
+        SoundPlayer salidaBeepRnd = new SoundPlayer();
+
+
         bool endConection = false; //Bandera de comunicación serial
         bool salida;               //Variable que indica si el auto va de salida
         //string textEvento;         //Mensaje de comunicación serial 
 
+        private Form activeForm = null;
 
         System.IO.Ports.SerialPort puerto = new System.IO.Ports.SerialPort(); //Instancia de la clase puerto
         List<string> listaEstacionamiento = new List<string>();  //Lista donde se almacenan los ID de los carros
         int ingresos = 0;   //Carros ingresados
-        int cupo = 257;     //Capacidad estacionamiento
+        int capacidad;     //Capacidad estacionamiento
+        int capacidadDefault = 257;
+
+        Random rnd = new Random();
+        bool rndAudio = true;
+        int randomNumber;
+
         #endregion
         #region Inicializar
         public MainForm()
         {
             InitializeComponent();     //Método de inicialización de Form
-            puerto.PortName = "COM5";  //Indicación de puerto por defecto
+            puerto.PortName = "COM4";  //Indicación de puerto por defecto
             puerto.BaudRate = 9600;    //Indicación de la velocidad de comunicación 
             puerto.ReadTimeout = 500;  //Tiempo de espera para periodo de espera en lectura
             try
@@ -38,7 +63,29 @@ namespace ContadorVehicular
                 puerto.Open();  //Se aplica el método Open para entablar comunicación
             }
             catch { }
-            labelEspacios.Text = (cupo - ingresos).ToString();
+            if(!File.Exists(pathBDCapacity))
+            {
+                ReplaceValueBD(capacidadDefault.ToString(), pathBDCapacity);
+                capacidad = capacidadDefault;
+
+            }else
+            {
+                capacidad = int.Parse(SimpleConsult(pathBDCapacity));
+            }
+            
+            labelEspacios.Text = (capacidad - ingresos).ToString();
+            try
+            {
+                regisBeep.SoundLocation = @"..\..\sound\registerBeep.wav";
+                salidaBeep.SoundLocation = @"..\..\sound\salidaBeep.wav";
+                
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Faltan Archivos de sonido, error: 1001");
+            }
+            
 
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -46,7 +93,9 @@ namespace ContadorVehicular
             
             Thread Hilo = new Thread(EscuchaPuerto); //Se crea hilo de escucha de puerto
             Hilo.Start(); //Se inicia hilo
-            AbrirFormulario(new FormEstacionamiento());
+            formEstacionamiento = new FormEstacionamiento();
+            AbrirFormularioEstacionamiento();
+            
         }
 
         #region MoverVentana
@@ -58,7 +107,7 @@ namespace ContadorVehicular
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
         #endregion
- #region MetodoEscuchaPuerto
+        #region MetodoEscuchaPuerto
         private void EscuchaPuerto() //método escuchar puerto para ejecutar en un hilo
         {
             while(!endConection) //Mientra no termine la conexión
@@ -85,7 +134,7 @@ namespace ContadorVehicular
                                 ingresos--;
                                 labelCounterCar.Text = ingresos.ToString();
                                 salida = false;
-                                RegistrarBD(cadena,"salida ",pathBDRegistro);
+                                RegistrarBD(cadena,"salida ",pathBDRegistro,true);
                                 ReplaceValueBD(ingresos.ToString(), pathBDConteo);
                             }
                             else
@@ -94,11 +143,14 @@ namespace ContadorVehicular
                                 labelCom.Text = "entrada" + cadena;
                                 ingresos++;
                                 labelCounterCar.Text = ingresos.ToString();
-                                RegistrarBD(cadena, "entrada",pathBDRegistro);
+                                RegistrarBD(cadena, "entrada",pathBDRegistro,false);
                                 ReplaceValueBD(ingresos.ToString(),pathBDConteo);
-                            }
 
-                            labelEspacios.Text = (cupo - ingresos).ToString();
+                            }
+                            formEstacionamiento.Ingresos = ingresos.ToString();
+                            formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
+                            formEstacionamiento.refrescarValor();
+                            labelEspacios.Text = (capacidad - ingresos).ToString();
                             #endregion                           
                         }
                         ));
@@ -157,45 +209,89 @@ namespace ContadorVehicular
         #endregion
         #region Formularios hijos
 
-        private Form activeForm = null;
+        
         private void AbrirFormulario(Form formHijo)
         {
-            /*
-            if(this.panelCont.Controls.Count > 0)
-            {
-                this.panelCont.Controls.RemoveAt(0);
-            }
-            Form fh = formHijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelCont.Controls.Add(fh);
-            this.panelCont.Tag = fh;
-            fh.Show();  */
-            
+                       
             if (activeForm != null)
             {
                 activeForm.Close();
             }
                 
             activeForm = formHijo;
+            
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
             this.panelCont.Controls.Add(formHijo);
             this.panelCont.Tag = formHijo;
             formHijo.BringToFront();
-            formHijo.Show();
-
-
+            formHijo.Show(); 
+            
         }
 
+        private void AbrirFormularioEstacionamiento()
+        {
+            CierraFormActivo();
+            formEstacionamiento = new FormEstacionamiento();
+            formEstacionamiento.TopLevel = false;
+            formEstacionamiento.FormBorderStyle = FormBorderStyle.None;
+            formEstacionamiento.Dock = DockStyle.Fill;
+            this.panelCont.Controls.Add(formEstacionamiento);
+            formEstacionamiento.BringToFront();
 
+            formEstacionamiento.Ingresos = ingresos.ToString();
+            formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
+            formEstacionamiento.refrescarValor();
+            formEstacionamiento.Show();
+            tabEstacionamiento = true;
+
+        }
+        private void AbrirFormularioStatics()
+        {
+            CierraFormActivo();
+            formStatics = new FormStatics();
+            formStatics.TopLevel = false;
+            formStatics.FormBorderStyle = FormBorderStyle.None;
+            formStatics.Dock = DockStyle.Fill;
+            this.panelCont.Controls.Add(formStatics);
+            formStatics.BringToFront();
+            formStatics.Show();
+            tabStatics = true;
+        }
+
+        private void AbrirFormularioSettings()
+        {
+            CierraFormActivo();
+            formSettings = new FormSettings();
+            formSettings.TopLevel = false;
+            formSettings.FormBorderStyle = FormBorderStyle.None;
+            formSettings.Dock = DockStyle.Fill;
+            this.panelCont.Controls.Add(formSettings);
+            formSettings.BringToFront();
+            formSettings.Show();
+            tabAjustes = true;
+        }
+        private void AbrirFormularioInicio()
+        {
+            CierraFormActivo();
+            formInicio = new Inicio();
+            formInicio.TopLevel = false;
+            formInicio.FormBorderStyle = FormBorderStyle.None;
+            formSettings.Dock = DockStyle.Fill;
+            this.panelCont.Controls.Add(formInicio);
+            formInicio.BringToFront();
+            formInicio.Show();
+            tabInicio = true;
+        }
 
         #endregion
         #region PestañasBtns
         private void BtnEstacionamiento_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormEstacionamiento());
+            //AbrirFormulario(new FormEstacionamiento());
+            AbrirFormularioEstacionamiento();
+            
             labelHeaderTittle.Text = "Sistema de conteo";
             labelHeaderSubtittle.Text = "vehicular";
             
@@ -208,7 +304,8 @@ namespace ContadorVehicular
 
         private void BtnStatics_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormStatics());
+            //AbrirFormulario(new FormStatics());
+            AbrirFormularioStatics();
             labelHeaderTittle.Text = "Estadística";
             labelHeaderSubtittle.Text = "Análisis de datos";
             btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
@@ -219,7 +316,8 @@ namespace ContadorVehicular
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormSettings());
+            //AbrirFormulario(new FormSettings());
+            AbrirFormularioSettings();
             labelHeaderTittle.Text = "Ajustes";
             labelHeaderSubtittle.Text = "Requiere identificación";
             btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
@@ -231,7 +329,8 @@ namespace ContadorVehicular
 
         private void BtnSesion_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new Inicio());
+            //AbrirFormulario(new Inicio());
+            AbrirFormularioInicio();
             labelHeaderTittle.Text = "Sesión";
             labelHeaderSubtittle.Text = "Identificación de trabajador";
             btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
@@ -245,13 +344,15 @@ namespace ContadorVehicular
         #endregion
         #region EscribirBD
 
-        private void RegistrarBD(string id, string evento, string bdPath)
+        private void RegistrarBD(string id, string evento, string bdPath, bool salida)
         {
             id = id.Replace("\r", "");
             StreamWriter writer = File.AppendText(bdPath);
             writer.WriteLine(id + "        " + evento + "        " + DateTime.Now.ToString());
             writer.Close();
-            MessageBox.Show("Datos guardados de registro", "datos guardados");
+            //MessageBox.Show("Datos guardados de registro", "datos guardados");
+            PlaySound(rndAudio, salida);        
+            
         }
         #endregion
         #region makeCount
@@ -260,8 +361,184 @@ namespace ContadorVehicular
             TextWriter textWriter = new StreamWriter(bdPath);
             textWriter.WriteLine(text);
             textWriter.Close();
-            MessageBox.Show("Datos guardados de conteo", "datos guardados");
+            //MessageBox.Show("Datos guardados de conteo", "datos guardados");
+            
+        }
+
+        
+        #endregion
+
+        #region simpleConsult
+        private string SimpleConsult(string pathBD)
+        {
+            TextReader lectorSimple = new StreamReader(pathBD);
+            return lectorSimple.ReadLine();
         }
         #endregion
+
+        #region AsignAudio
+        private void PlaySound(bool random, bool salida)
+        {
+            
+            if(random)
+            {
+                randomNumber = rnd.Next(0, 2);
+                if (salida)
+                {
+
+                    salidaBeepRnd.SoundLocation = @"..\..\sound\salidaVoice"+randomNumber+".wav";
+                    salidaBeepRnd.Play();
+                }
+                else
+                {
+                    regisBeepRnd.SoundLocation = @"..\..\sound\registerVoice" + randomNumber + ".wav";
+                    regisBeepRnd.Play();
+                }
+            }
+            else
+            {
+                if(salida)
+                {
+                    salidaBeep.Play();
+                }
+                else
+                {
+                    regisBeep.Play();
+                }
+            }
+        }
+
+        #endregion
+
+        #region CerrarFormActivo
+        private void CierraFormActivo()
+        {
+            if (tabEstacionamiento)
+            {
+                formEstacionamiento.Close();
+                tabEstacionamiento = false;
+            }else if(tabStatics)
+            {
+                formStatics.Close();
+                tabStatics = false;
+            }else if (tabAjustes)
+            {
+                formSettings.Close();
+                tabAjustes = false;
+            }else if (tabInicio)
+            {
+                formInicio.Close();
+                tabInicio = false;
+            }        
+            
+
+        }
+        #endregion
+
+        #region MenuStrip
+
+        #region Archivo
+        private void bDRegistrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(pathBDRegistro);
+        }
+      
+
+        private void bDIngresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(pathBDConteo);
+        }
+
+        private void bDCapacidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(pathBDCapacity);
+        }
+        #endregion
+
+        #region Editar
+        private void registrarIngresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManualPlus();
+
+        }
+
+        private void registrarSalidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManualLess();
+            
+        }
+
+
+
+
+
+
+
+
+        #endregion
+
+        #endregion
+
+        #region BTNPLUS  LESS
+        private void btnManualPlus_MouseUp(object sender, MouseEventArgs e)
+        {
+            ManualPlus();
+        }
+
+        private void btnManualLess_MouseUp(object sender, MouseEventArgs e)
+        {
+            ManualLess();
+           
+        }
+
+        #endregion
+
+
+        #region FuncionesManipulacionManual
+        private void ManualPlus()
+        {
+            bool rndActual = rndAudio;
+            if (rndAudio)
+            {               
+                rndAudio = false;
+            }
+           
+            ingresos++;
+            RegistrarBD("Registro manual", "entrada", pathBDRegistro, false);
+            ReplaceValueBD(ingresos.ToString(), pathBDConteo);
+            formEstacionamiento.Ingresos = ingresos.ToString();
+            formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
+            formEstacionamiento.refrescarValor();
+
+            rndAudio = rndActual;
+        }
+
+        private void ManualLess()
+        {
+            if (ingresos > 0)
+            {
+                bool rndActual = rndAudio;
+                if (rndAudio)
+                {
+                    rndAudio = false;
+                }
+              
+                ingresos--;
+                RegistrarBD("Registro manual", "salida", pathBDRegistro, true);
+                ReplaceValueBD(ingresos.ToString(), pathBDConteo);
+                formEstacionamiento.Ingresos = ingresos.ToString();
+                formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
+                formEstacionamiento.refrescarValor();
+                rndAudio = rndActual;
+            }
+            else
+            {
+                MessageBox.Show("No puede registrar una salida porque no hay ingresos registrados", "REGISTRO IMPOSIBLE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+       
     }
 }

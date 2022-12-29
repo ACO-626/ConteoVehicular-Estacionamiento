@@ -5,3 +5,470 @@ ID: 83 F6 F7 24        entrada        22/12/2022 03:14:27 p. m.
 ID: 83 F6 F7 24        salida         22/12/2022 03:15:25 p. m.
 ID: 83 F6 F7 24        entrada        22/12/2022 03:15:28 p. m.
 ID: 83 F6 F7 24        salida         22/12/2022 03:15:39 p. m.
+ID: 83 F6 F7 24        entrada        22/12/2022 09:14:36 p. m.
+ID: 83 F6 F7 24        salida         22/12/2022 09:14:39 p. m.
+ID: 83 F6 F7 24        entrada        22/12/2022 09:14:39 p. m.
+ID: 83 F6 F7 24        salida         22/12/2022 09:14:43 p. m.
+ID: 83 F6 F7 24        entrada        22/12/2022 09:14:49 p. m.
+ID: 83 F6 F7 24        salida         22/12/2022 09:14:54 p. m.
+Lectura en espera [RFID/NFC ]:         entrada        28/12/2022 12:01:08 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:01:17 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:01:20 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:01:22 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:01:23 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:01:25 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:18 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:20 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:22 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:24 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:25 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:27 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:29 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:30 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:32 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:33 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:37 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:38 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 12:08:50 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 12:08:51 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:08:53 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 12:08:56 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:08:58 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 12:09:00 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:13:15 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:45:09 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:45:12 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 12:45:14 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 12:45:15 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:35:48 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:35:50 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:36:20 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:36:24 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:36:27 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:36:34 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:36:37 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:36:40 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:43:59 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:44:03 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:44:04 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:44:06 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:44:10 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:44:12 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:44:18 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:44:21 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:44:31 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:44:43 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:47:09 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:47:13 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:47:15 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:47:17 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:47:20 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:47:22 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:47:25 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:47:28 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:47:45 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:47:49 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:47:55 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:47:58 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 01:59:36 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 01:59:40 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 01:59:45 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 01:59:48 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 02:00:15 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 02:00:17 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 02:00:22 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 02:00:25 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 02:05:40 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 02:05:42 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 02:05:45 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 02:05:47 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 02:05:50 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 02:05:52 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 02:05:55 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 02:05:58 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 02:06:27 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 02:06:37 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 02:06:40 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 02:06:42 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 02:08:41 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 02:08:51 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 02:09:00 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 02:09:05 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 03:08:33 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 03:08:35 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 03:08:37 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 03:08:39 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 03:08:41 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 03:08:42 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 03:08:44 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 03:08:46 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 03:08:48 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 03:08:50 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 03:08:52 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 03:08:53 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 03:08:54 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 03:08:57 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 03:09:00 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 03:09:04 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 03:09:06 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 03:09:08 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 07:40:14 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 07:40:42 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 07:40:54 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 07:40:57 p. m.
+Registro manual        entrada        28/12/2022 07:45:14 p. m.
+Registro manual        entrada        28/12/2022 07:45:16 p. m.
+Registro manual        entrada        28/12/2022 07:45:18 p. m.
+Registro manual        entrada        28/12/2022 07:45:19 p. m.
+Registro manual        entrada        28/12/2022 07:45:21 p. m.
+Registro manual        entrada        28/12/2022 07:45:22 p. m.
+Registro manual        entrada        28/12/2022 07:45:24 p. m.
+Registro manual        entrada        28/12/2022 07:45:25 p. m.
+Registro manual        entrada        28/12/2022 07:45:27 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 07:45:29 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 07:45:32 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 07:45:35 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 07:45:37 p. m.
+Registro manual        entrada        28/12/2022 07:49:48 p. m.
+Registro manual        salida        28/12/2022 07:49:51 p. m.
+Registro manual        entrada        28/12/2022 07:49:53 p. m.
+Registro manual        salida        28/12/2022 07:49:55 p. m.
+Registro manual        entrada        28/12/2022 07:49:57 p. m.
+Registro manual        entrada        28/12/2022 07:49:59 p. m.
+Registro manual        entrada        28/12/2022 07:50:00 p. m.
+Registro manual        entrada        28/12/2022 07:50:01 p. m.
+Registro manual        entrada        28/12/2022 07:50:03 p. m.
+Registro manual        entrada        28/12/2022 07:50:04 p. m.
+Registro manual        entrada        28/12/2022 07:50:06 p. m.
+Registro manual        entrada        28/12/2022 07:50:07 p. m.
+Registro manual        entrada        28/12/2022 07:50:09 p. m.
+Registro manual        entrada        28/12/2022 07:50:10 p. m.
+Registro manual        entrada        28/12/2022 07:50:11 p. m.
+Registro manual        salida        28/12/2022 07:50:12 p. m.
+Registro manual        salida        28/12/2022 07:50:14 p. m.
+Registro manual        salida        28/12/2022 07:50:16 p. m.
+Registro manual        salida        28/12/2022 07:50:18 p. m.
+Registro manual        salida        28/12/2022 07:50:20 p. m.
+Registro manual        salida        28/12/2022 07:50:23 p. m.
+Registro manual        entrada        28/12/2022 07:50:49 p. m.
+Registro manual        entrada        28/12/2022 07:50:50 p. m.
+Registro manual        entrada        28/12/2022 07:50:52 p. m.
+Registro manual        entrada        28/12/2022 07:50:54 p. m.
+Registro manual        entrada        28/12/2022 07:50:56 p. m.
+Registro manual        entrada        28/12/2022 07:50:58 p. m.
+Registro manual        entrada        28/12/2022 07:51:01 p. m.
+Registro manual        entrada        28/12/2022 07:51:02 p. m.
+Registro manual        entrada        28/12/2022 07:51:04 p. m.
+Registro manual        salida        28/12/2022 07:51:05 p. m.
+Registro manual        salida        28/12/2022 07:51:08 p. m.
+Registro manual        salida        28/12/2022 07:51:09 p. m.
+Registro manual        salida        28/12/2022 07:51:11 p. m.
+Registro manual        salida        28/12/2022 07:51:12 p. m.
+Registro manual        salida        28/12/2022 07:51:14 p. m.
+Registro manual        salida        28/12/2022 07:51:17 p. m.
+Registro manual        salida        28/12/2022 07:51:19 p. m.
+Registro manual        salida        28/12/2022 07:51:21 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 07:51:35 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 07:51:37 p. m.
+Registro manual        entrada        28/12/2022 11:11:59 p. m.
+Registro manual        entrada        28/12/2022 11:12:00 p. m.
+Registro manual        entrada        28/12/2022 11:12:02 p. m.
+Registro manual        entrada        28/12/2022 11:12:03 p. m.
+Registro manual        entrada        28/12/2022 11:12:04 p. m.
+Registro manual        entrada        28/12/2022 11:12:05 p. m.
+Registro manual        entrada        28/12/2022 11:12:06 p. m.
+Registro manual        entrada        28/12/2022 11:12:08 p. m.
+Registro manual        entrada        28/12/2022 11:12:09 p. m.
+Registro manual        salida        28/12/2022 11:12:10 p. m.
+Registro manual        salida        28/12/2022 11:12:11 p. m.
+Registro manual        salida        28/12/2022 11:12:13 p. m.
+Registro manual        salida        28/12/2022 11:12:14 p. m.
+Registro manual        salida        28/12/2022 11:12:15 p. m.
+Registro manual        salida        28/12/2022 11:12:17 p. m.
+Registro manual        salida        28/12/2022 11:12:18 p. m.
+Registro manual        salida        28/12/2022 11:12:20 p. m.
+Registro manual        entrada        28/12/2022 11:15:00 p. m.
+Registro manual        entrada        28/12/2022 11:15:01 p. m.
+Registro manual        entrada        28/12/2022 11:15:02 p. m.
+Registro manual        entrada        28/12/2022 11:15:02 p. m.
+Registro manual        entrada        28/12/2022 11:15:03 p. m.
+Registro manual        salida        28/12/2022 11:15:04 p. m.
+Registro manual        salida        28/12/2022 11:15:05 p. m.
+Registro manual        salida        28/12/2022 11:15:06 p. m.
+Registro manual        salida        28/12/2022 11:15:06 p. m.
+Registro manual        salida        28/12/2022 11:15:07 p. m.
+Registro manual        entrada        28/12/2022 11:15:10 p. m.
+Registro manual        entrada        28/12/2022 11:15:11 p. m.
+Registro manual        entrada        28/12/2022 11:15:12 p. m.
+Registro manual        entrada        28/12/2022 11:15:12 p. m.
+Registro manual        entrada        28/12/2022 11:15:13 p. m.
+Registro manual        entrada        28/12/2022 11:15:13 p. m.
+Registro manual        entrada        28/12/2022 11:15:13 p. m.
+Registro manual        entrada        28/12/2022 11:15:14 p. m.
+Registro manual        entrada        28/12/2022 11:15:14 p. m.
+Registro manual        entrada        28/12/2022 11:15:15 p. m.
+Registro manual        salida        28/12/2022 11:15:16 p. m.
+Registro manual        salida        28/12/2022 11:15:16 p. m.
+Registro manual        salida        28/12/2022 11:15:17 p. m.
+Registro manual        salida        28/12/2022 11:15:17 p. m.
+Registro manual        salida        28/12/2022 11:15:17 p. m.
+Registro manual        salida        28/12/2022 11:15:18 p. m.
+Registro manual        salida        28/12/2022 11:15:18 p. m.
+Registro manual        salida        28/12/2022 11:15:19 p. m.
+Registro manual        salida        28/12/2022 11:15:19 p. m.
+Registro manual        salida        28/12/2022 11:15:20 p. m.
+Registro manual        entrada        28/12/2022 11:15:23 p. m.
+Registro manual        entrada        28/12/2022 11:15:24 p. m.
+Registro manual        entrada        28/12/2022 11:15:24 p. m.
+Registro manual        entrada        28/12/2022 11:15:25 p. m.
+Registro manual        entrada        28/12/2022 11:15:25 p. m.
+Registro manual        entrada        28/12/2022 11:15:25 p. m.
+Registro manual        entrada        28/12/2022 11:15:26 p. m.
+Registro manual        entrada        28/12/2022 11:15:26 p. m.
+Registro manual        entrada        28/12/2022 11:15:27 p. m.
+Registro manual        entrada        28/12/2022 11:15:27 p. m.
+Registro manual        entrada        28/12/2022 11:15:27 p. m.
+Registro manual        entrada        28/12/2022 11:15:28 p. m.
+Registro manual        entrada        28/12/2022 11:15:28 p. m.
+Registro manual        entrada        28/12/2022 11:15:28 p. m.
+Registro manual        entrada        28/12/2022 11:15:29 p. m.
+Registro manual        entrada        28/12/2022 11:15:29 p. m.
+Registro manual        entrada        28/12/2022 11:15:30 p. m.
+Registro manual        entrada        28/12/2022 11:15:30 p. m.
+Registro manual        entrada        28/12/2022 11:15:31 p. m.
+Registro manual        entrada        28/12/2022 11:15:31 p. m.
+Registro manual        entrada        28/12/2022 11:15:31 p. m.
+Registro manual        entrada        28/12/2022 11:15:31 p. m.
+Registro manual        entrada        28/12/2022 11:15:31 p. m.
+Registro manual        entrada        28/12/2022 11:15:32 p. m.
+Registro manual        salida        28/12/2022 11:15:33 p. m.
+Registro manual        salida        28/12/2022 11:15:33 p. m.
+Registro manual        salida        28/12/2022 11:15:33 p. m.
+Registro manual        salida        28/12/2022 11:15:33 p. m.
+Registro manual        salida        28/12/2022 11:15:34 p. m.
+Registro manual        salida        28/12/2022 11:15:34 p. m.
+Registro manual        salida        28/12/2022 11:15:34 p. m.
+Registro manual        salida        28/12/2022 11:15:34 p. m.
+Registro manual        salida        28/12/2022 11:15:34 p. m.
+Registro manual        salida        28/12/2022 11:15:35 p. m.
+Registro manual        salida        28/12/2022 11:15:35 p. m.
+Registro manual        salida        28/12/2022 11:15:35 p. m.
+Registro manual        salida        28/12/2022 11:15:35 p. m.
+Registro manual        salida        28/12/2022 11:15:36 p. m.
+Registro manual        salida        28/12/2022 11:15:36 p. m.
+Registro manual        salida        28/12/2022 11:15:36 p. m.
+Registro manual        salida        28/12/2022 11:15:36 p. m.
+Registro manual        salida        28/12/2022 11:15:36 p. m.
+Registro manual        salida        28/12/2022 11:15:37 p. m.
+Registro manual        salida        28/12/2022 11:15:37 p. m.
+Registro manual        salida        28/12/2022 11:15:37 p. m.
+Registro manual        salida        28/12/2022 11:15:38 p. m.
+Registro manual        salida        28/12/2022 11:15:38 p. m.
+Registro manual        salida        28/12/2022 11:15:40 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 11:15:42 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:15:46 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 11:15:48 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 11:15:50 p. m.
+Registro manual        entrada        28/12/2022 11:17:41 p. m.
+Registro manual        entrada        28/12/2022 11:17:43 p. m.
+Registro manual        entrada        28/12/2022 11:17:48 p. m.
+Registro manual        entrada        28/12/2022 11:17:50 p. m.
+Registro manual        entrada        28/12/2022 11:17:53 p. m.
+Registro manual        salida        28/12/2022 11:17:55 p. m.
+Registro manual        salida        28/12/2022 11:17:57 p. m.
+Registro manual        salida        28/12/2022 11:17:59 p. m.
+Registro manual        salida        28/12/2022 11:18:00 p. m.
+Registro manual        salida        28/12/2022 11:18:09 p. m.
+Registro manual        entrada        28/12/2022 11:18:11 p. m.
+Registro manual        entrada        28/12/2022 11:18:11 p. m.
+Registro manual        entrada        28/12/2022 11:18:23 p. m.
+Registro manual        entrada        28/12/2022 11:18:23 p. m.
+Registro manual        entrada        28/12/2022 11:18:24 p. m.
+Registro manual        entrada        28/12/2022 11:18:24 p. m.
+Registro manual        entrada        28/12/2022 11:18:25 p. m.
+Registro manual        entrada        28/12/2022 11:18:25 p. m.
+Registro manual        salida        28/12/2022 11:18:26 p. m.
+Registro manual        entrada        28/12/2022 11:18:29 p. m.
+Registro manual        entrada        28/12/2022 11:18:30 p. m.
+Registro manual        entrada        28/12/2022 11:21:45 p. m.
+Registro manual        entrada        28/12/2022 11:21:45 p. m.
+Registro manual        entrada        28/12/2022 11:21:49 p. m.
+Registro manual        salida        28/12/2022 11:21:50 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:21:53 p. m.
+Registro manual        entrada        28/12/2022 11:21:56 p. m.
+Registro manual        entrada        28/12/2022 11:21:58 p. m.
+Registro manual        entrada        28/12/2022 11:22:00 p. m.
+Registro manual        entrada        28/12/2022 11:22:01 p. m.
+Registro manual        entrada        28/12/2022 11:22:03 p. m.
+Registro manual        salida        28/12/2022 11:22:06 p. m.
+Registro manual        salida        28/12/2022 11:22:07 p. m.
+Registro manual        entrada        28/12/2022 11:22:07 p. m.
+Registro manual        entrada        28/12/2022 11:25:10 p. m.
+Registro manual        salida        28/12/2022 11:25:22 p. m.
+Registro manual        entrada        28/12/2022 11:26:01 p. m.
+Registro manual        entrada        28/12/2022 11:26:05 p. m.
+Registro manual        salida        28/12/2022 11:26:07 p. m.
+Registro manual        salida        28/12/2022 11:26:10 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:26:12 p. m.
+Registro manual        entrada        28/12/2022 11:26:17 p. m.
+Registro manual        entrada        28/12/2022 11:28:12 p. m.
+Registro manual        salida        28/12/2022 11:28:14 p. m.
+Registro manual        entrada        28/12/2022 11:28:17 p. m.
+Registro manual        entrada        28/12/2022 11:30:34 p. m.
+Registro manual        entrada        28/12/2022 11:30:44 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:30:47 p. m.
+Registro manual        entrada        28/12/2022 11:30:54 p. m.
+Registro manual        entrada        28/12/2022 11:34:30 p. m.
+Registro manual        entrada        28/12/2022 11:34:51 p. m.
+Registro manual        entrada        28/12/2022 11:34:52 p. m.
+Registro manual        entrada        28/12/2022 11:34:53 p. m.
+Registro manual        entrada        28/12/2022 11:34:53 p. m.
+Registro manual        entrada        28/12/2022 11:34:54 p. m.
+Registro manual        entrada        28/12/2022 11:34:54 p. m.
+Registro manual        entrada        28/12/2022 11:34:55 p. m.
+Registro manual        salida        28/12/2022 11:34:55 p. m.
+Registro manual        salida        28/12/2022 11:34:56 p. m.
+Registro manual        salida        28/12/2022 11:34:56 p. m.
+Registro manual        salida        28/12/2022 11:34:57 p. m.
+Registro manual        salida        28/12/2022 11:34:57 p. m.
+Registro manual        salida        28/12/2022 11:34:57 p. m.
+Registro manual        salida        28/12/2022 11:34:58 p. m.
+Registro manual        entrada        28/12/2022 11:35:03 p. m.
+Registro manual        entrada        28/12/2022 11:35:03 p. m.
+Registro manual        entrada        28/12/2022 11:35:03 p. m.
+Registro manual        entrada        28/12/2022 11:35:03 p. m.
+Registro manual        entrada        28/12/2022 11:35:04 p. m.
+Registro manual        entrada        28/12/2022 11:35:04 p. m.
+Registro manual        entrada        28/12/2022 11:35:04 p. m.
+Registro manual        entrada        28/12/2022 11:35:04 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:35:08 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 11:35:09 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:35:10 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 11:35:11 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:35:12 p. m.
+Registro manual        entrada        28/12/2022 11:35:57 p. m.
+Registro manual        entrada        28/12/2022 11:35:57 p. m.
+Registro manual        entrada        28/12/2022 11:35:57 p. m.
+Registro manual        entrada        28/12/2022 11:35:58 p. m.
+Registro manual        entrada        28/12/2022 11:35:58 p. m.
+Registro manual        salida        28/12/2022 11:35:59 p. m.
+Registro manual        salida        28/12/2022 11:35:59 p. m.
+Registro manual        salida        28/12/2022 11:35:59 p. m.
+Registro manual        salida        28/12/2022 11:36:00 p. m.
+Registro manual        salida        28/12/2022 11:36:00 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:36:02 p. m.
+ID: 83 F6 F7 24        salida         28/12/2022 11:36:03 p. m.
+ID: 41 21 62 A3        entrada        28/12/2022 11:36:06 p. m.
+ID: 41 21 62 A3        salida         28/12/2022 11:36:07 p. m.
+Registro manual        entrada        28/12/2022 11:36:12 p. m.
+Registro manual        entrada        28/12/2022 11:36:12 p. m.
+Registro manual        entrada        28/12/2022 11:36:12 p. m.
+Registro manual        entrada        28/12/2022 11:36:13 p. m.
+Registro manual        entrada        28/12/2022 11:36:13 p. m.
+Registro manual        entrada        28/12/2022 11:36:13 p. m.
+Registro manual        entrada        28/12/2022 11:36:13 p. m.
+Registro manual        entrada        28/12/2022 11:36:14 p. m.
+Registro manual        salida        28/12/2022 11:36:15 p. m.
+Registro manual        salida        28/12/2022 11:36:15 p. m.
+Registro manual        salida        28/12/2022 11:36:15 p. m.
+Registro manual        salida        28/12/2022 11:36:15 p. m.
+Registro manual        salida        28/12/2022 11:36:16 p. m.
+Registro manual        salida        28/12/2022 11:36:16 p. m.
+Registro manual        salida        28/12/2022 11:36:17 p. m.
+Registro manual        salida        28/12/2022 11:36:17 p. m.
+Registro manual        entrada        28/12/2022 11:36:20 p. m.
+Registro manual        entrada        28/12/2022 11:36:20 p. m.
+Registro manual        entrada        28/12/2022 11:36:21 p. m.
+Registro manual        entrada        28/12/2022 11:36:21 p. m.
+Registro manual        entrada        28/12/2022 11:36:21 p. m.
+Registro manual        entrada        28/12/2022 11:36:22 p. m.
+Registro manual        entrada        28/12/2022 11:36:22 p. m.
+Registro manual        salida        28/12/2022 11:36:22 p. m.
+Registro manual        salida        28/12/2022 11:36:23 p. m.
+Registro manual        salida        28/12/2022 11:36:23 p. m.
+Registro manual        salida        28/12/2022 11:36:23 p. m.
+Registro manual        salida        28/12/2022 11:36:23 p. m.
+Registro manual        salida        28/12/2022 11:36:24 p. m.
+Registro manual        salida        28/12/2022 11:36:24 p. m.
+ID: 83 F6 F7 24        entrada        28/12/2022 11:36:26 p. m.
+Registro manual        entrada        28/12/2022 11:36:28 p. m.
+Registro manual        entrada        28/12/2022 11:36:29 p. m.
+Registro manual        entrada        28/12/2022 11:36:29 p. m.
+Registro manual        entrada        28/12/2022 11:36:30 p. m.
+Registro manual        entrada        28/12/2022 11:36:30 p. m.
+Registro manual        entrada        28/12/2022 11:36:30 p. m.
+Registro manual        entrada        28/12/2022 11:36:31 p. m.
+Registro manual        salida        28/12/2022 11:36:35 p. m.
+Registro manual        salida        28/12/2022 11:36:35 p. m.
+Registro manual        salida        28/12/2022 11:36:35 p. m.
+Registro manual        salida        28/12/2022 11:36:35 p. m.
+Registro manual        salida        28/12/2022 11:36:36 p. m.
+Registro manual        salida        28/12/2022 11:36:36 p. m.
+Registro manual        salida        28/12/2022 11:36:36 p. m.
+Registro manual        salida        28/12/2022 11:36:36 p. m.
+Registro manual        entrada        28/12/2022 11:36:40 p. m.
+Registro manual        entrada        28/12/2022 11:36:40 p. m.
+Registro manual        entrada        28/12/2022 11:36:41 p. m.
+Registro manual        entrada        28/12/2022 11:36:41 p. m.
+Registro manual        entrada        28/12/2022 11:36:41 p. m.
+Registro manual        entrada        28/12/2022 11:36:42 p. m.
+Registro manual        entrada        28/12/2022 11:36:42 p. m.
+Registro manual        entrada        28/12/2022 11:36:42 p. m.
+Registro manual        entrada        28/12/2022 11:36:42 p. m.
+Registro manual        entrada        28/12/2022 11:36:43 p. m.
+Registro manual        entrada        28/12/2022 11:36:43 p. m.
+Registro manual        entrada        28/12/2022 11:36:43 p. m.
+Registro manual        entrada        28/12/2022 11:36:44 p. m.
+Registro manual        entrada        28/12/2022 11:36:44 p. m.
+Registro manual        salida        28/12/2022 11:36:44 p. m.
+Registro manual        salida        28/12/2022 11:36:45 p. m.
+Registro manual        salida        28/12/2022 11:36:45 p. m.
+Registro manual        salida        28/12/2022 11:36:45 p. m.
+Registro manual        salida        28/12/2022 11:36:45 p. m.
+Registro manual        salida        28/12/2022 11:36:45 p. m.
+Registro manual        salida        28/12/2022 11:36:46 p. m.
+Registro manual        salida        28/12/2022 11:36:46 p. m.
+Registro manual        salida        28/12/2022 11:36:46 p. m.
+Registro manual        salida        28/12/2022 11:36:46 p. m.
+Registro manual        salida        28/12/2022 11:36:47 p. m.
+Registro manual        salida        28/12/2022 11:36:47 p. m.
+Registro manual        salida        28/12/2022 11:36:47 p. m.
+Registro manual        salida        28/12/2022 11:36:48 p. m.
+Registro manual        entrada        29/12/2022 12:04:20 a. m.
+Registro manual        entrada        29/12/2022 12:04:21 a. m.
+Registro manual        entrada        29/12/2022 12:04:21 a. m.
+Registro manual        entrada        29/12/2022 12:04:23 a. m.
+Registro manual        entrada        29/12/2022 12:04:24 a. m.
+Registro manual        entrada        29/12/2022 12:04:25 a. m.
+Registro manual        salida        29/12/2022 12:04:26 a. m.
+Registro manual        salida        29/12/2022 12:04:27 a. m.
+Registro manual        salida        29/12/2022 12:04:28 a. m.
+Registro manual        salida        29/12/2022 12:04:29 a. m.
+Registro manual        salida        29/12/2022 12:04:30 a. m.
+Registro manual        entrada        29/12/2022 12:04:31 a. m.
+Registro manual        entrada        29/12/2022 12:04:33 a. m.
+Registro manual        entrada        29/12/2022 12:04:34 a. m.
+Registro manual        entrada        29/12/2022 12:04:35 a. m.
+Registro manual        salida        29/12/2022 12:04:37 a. m.
+Registro manual        salida        29/12/2022 12:04:38 a. m.
+Registro manual        salida        29/12/2022 12:04:39 a. m.
+Registro manual        salida        29/12/2022 12:04:40 a. m.
+Registro manual        salida        29/12/2022 12:04:41 a. m.
+Registro manual        entrada        29/12/2022 12:05:38 a. m.
+Registro manual        entrada        29/12/2022 12:05:41 a. m.
+Registro manual        entrada        29/12/2022 12:05:41 a. m.
+Registro manual        entrada        29/12/2022 12:05:42 a. m.
+Registro manual        entrada        29/12/2022 12:05:44 a. m.
+Registro manual        entrada        29/12/2022 12:05:44 a. m.
+Registro manual        entrada        29/12/2022 12:05:44 a. m.
+Registro manual        entrada        29/12/2022 12:05:45 a. m.
+Registro manual        entrada        29/12/2022 12:05:45 a. m.
+Registro manual        salida        29/12/2022 12:05:46 a. m.
+Registro manual        salida        29/12/2022 12:05:46 a. m.
+Registro manual        salida        29/12/2022 12:05:46 a. m.
+Registro manual        salida        29/12/2022 12:05:46 a. m.
+Registro manual        salida        29/12/2022 12:05:46 a. m.
+Registro manual        salida        29/12/2022 12:05:47 a. m.
+Registro manual        salida        29/12/2022 12:05:47 a. m.
+Registro manual        salida        29/12/2022 12:05:47 a. m.
+Registro manual        salida        29/12/2022 12:05:47 a. m.
