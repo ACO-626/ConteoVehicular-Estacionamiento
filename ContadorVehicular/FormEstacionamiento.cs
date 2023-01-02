@@ -47,6 +47,7 @@ namespace ContadorVehicular
         #endregion
         public void refrescarValor()
         {
+            VerificarFuente(int.Parse(ingresos), int.Parse(espacios));
             labelIngresos.Text = ingresos ;
             labelEspacios.Text = espacios ;
         }
@@ -59,6 +60,27 @@ namespace ContadorVehicular
         }
         #endregion
 
-        
+        private void VerificarFuente(int ingresos, int espacios)
+        {
+            if (ingresos > 999 && ingresos < 9999)
+            {
+                labelIngresos.Font = new Font("Montserrat", 100f, labelEspacios.Font.Style);
+            }
+            else if (ingresos > 9999)
+            {
+                labelIngresos.Font = new Font("Montserrat", 75f, labelEspacios.Font.Style);
+              //  MessageBox.Show(labelEspacios.Font.Size.ToString());
+            }
+
+            if (espacios > 999 && espacios < 9999)
+            {
+                labelEspacios.Font = new Font("Montserrat", 100f, labelIngresos.Font.Style);
+            }
+            else if (espacios > 9999)
+            {
+                labelEspacios.Font = new Font("Montserrat", 75f, labelIngresos.Font.Style);
+                //MessageBox.Show(labelEspacios.Font.Size.ToString());
+            }
+        }
     }
 }

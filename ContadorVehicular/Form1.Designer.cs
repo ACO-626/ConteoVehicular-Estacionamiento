@@ -43,13 +43,15 @@ namespace ContadorVehicular
             this.btnMax = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSesion = new System.Windows.Forms.Button();
+            this.btnManualLess = new System.Windows.Forms.Button();
+            this.btnManualPlus = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnStatics = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEstacionamiento = new System.Windows.Forms.Button();
+            this.btnSesion = new System.Windows.Forms.Button();
             this.panelCont = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.pictureLogoApp = new System.Windows.Forms.PictureBox();
@@ -58,29 +60,30 @@ namespace ContadorVehicular
             this.labelHeaderTittle = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bDRegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bDIngresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bDCapacidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puertoLectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dosLectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puertoIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puertoSalidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.establecerAUnSensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.establecerADosSensoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.audioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.interfazPorVozToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.interfazNotificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desactivadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarIngresoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarSalidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.modificarCapacidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reiniciarConteoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnManualPlus = new System.Windows.Forms.Button();
-            this.btnManualLess = new System.Windows.Forms.Button();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sensorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puertoLectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BarraTittle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
@@ -268,24 +271,41 @@ namespace ContadorVehicular
             this.panelMenu.Size = new System.Drawing.Size(66, 664);
             this.panelMenu.TabIndex = 7;
             // 
-            // btnSesion
+            // btnManualLess
             // 
-            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSesion.FlatAppearance.BorderSize = 0;
-            this.btnSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
-            this.btnSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSesion.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSesion.ForeColor = System.Drawing.Color.White;
-            this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
-            this.btnSesion.Location = new System.Drawing.Point(0, 6);
-            this.btnSesion.Name = "btnSesion";
-            this.btnSesion.Size = new System.Drawing.Size(66, 71);
-            this.btnSesion.TabIndex = 5;
-            this.btnSesion.UseVisualStyleBackColor = false;
-            this.btnSesion.Visible = false;
-            this.btnSesion.Click += new System.EventHandler(this.BtnSesion_Click);
+            this.btnManualLess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnManualLess.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManualLess.FlatAppearance.BorderSize = 0;
+            this.btnManualLess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.btnManualLess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnManualLess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualLess.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManualLess.ForeColor = System.Drawing.Color.White;
+            this.btnManualLess.Image = ((System.Drawing.Image)(resources.GetObject("btnManualLess.Image")));
+            this.btnManualLess.Location = new System.Drawing.Point(0, 216);
+            this.btnManualLess.Name = "btnManualLess";
+            this.btnManualLess.Size = new System.Drawing.Size(66, 71);
+            this.btnManualLess.TabIndex = 7;
+            this.btnManualLess.UseVisualStyleBackColor = false;
+            this.btnManualLess.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnManualLess_MouseUp);
+            // 
+            // btnManualPlus
+            // 
+            this.btnManualPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnManualPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManualPlus.FlatAppearance.BorderSize = 0;
+            this.btnManualPlus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
+            this.btnManualPlus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnManualPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualPlus.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManualPlus.ForeColor = System.Drawing.Color.Transparent;
+            this.btnManualPlus.Image = ((System.Drawing.Image)(resources.GetObject("btnManualPlus.Image")));
+            this.btnManualPlus.Location = new System.Drawing.Point(0, 111);
+            this.btnManualPlus.Name = "btnManualPlus";
+            this.btnManualPlus.Size = new System.Drawing.Size(66, 71);
+            this.btnManualPlus.TabIndex = 6;
+            this.btnManualPlus.UseVisualStyleBackColor = false;
+            this.btnManualPlus.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnManualPlus_MouseUp);
             // 
             // panel3
             // 
@@ -320,6 +340,7 @@ namespace ContadorVehicular
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(8, 71);
             this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
             // 
             // btnStatics
             // 
@@ -337,6 +358,7 @@ namespace ContadorVehicular
             this.btnStatics.Size = new System.Drawing.Size(66, 71);
             this.btnStatics.TabIndex = 2;
             this.btnStatics.UseVisualStyleBackColor = false;
+            this.btnStatics.Visible = false;
             this.btnStatics.Click += new System.EventHandler(this.BtnStatics_Click);
             // 
             // panel1
@@ -364,6 +386,25 @@ namespace ContadorVehicular
             this.btnEstacionamiento.Text = "E";
             this.btnEstacionamiento.UseVisualStyleBackColor = false;
             this.btnEstacionamiento.Click += new System.EventHandler(this.BtnEstacionamiento_Click);
+            // 
+            // btnSesion
+            // 
+            this.btnSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSesion.FlatAppearance.BorderSize = 0;
+            this.btnSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
+            this.btnSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
+            this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSesion.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSesion.ForeColor = System.Drawing.Color.White;
+            this.btnSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnSesion.Image")));
+            this.btnSesion.Location = new System.Drawing.Point(0, 6);
+            this.btnSesion.Name = "btnSesion";
+            this.btnSesion.Size = new System.Drawing.Size(66, 71);
+            this.btnSesion.TabIndex = 5;
+            this.btnSesion.UseVisualStyleBackColor = false;
+            this.btnSesion.Visible = false;
+            this.btnSesion.Click += new System.EventHandler(this.BtnSesion_Click);
             // 
             // panelCont
             // 
@@ -446,42 +487,12 @@ namespace ContadorVehicular
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mostrarBaseDeDatosToolStripMenuItem});
+            this.mostrarBaseDeDatosToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.preferenciasToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarIngresoToolStripMenuItem,
-            this.registrarSalidaToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.modificarCapacidadToolStripMenuItem,
-            this.reiniciarConteoToolStripMenuItem});
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.editarToolStripMenuItem.Text = "Editar";
-            // 
-            // configuraciónToolStripMenuItem
-            // 
-            this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sensorToolStripMenuItem,
-            this.dosLectoresToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.establecerAUnSensorToolStripMenuItem,
-            this.establecerADosSensoresToolStripMenuItem});
-            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.configuraciónToolStripMenuItem.Text = "Configuración";
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.githubToolStripMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // mostrarBaseDeDatosToolStripMenuItem
             // 
@@ -496,81 +507,97 @@ namespace ContadorVehicular
             // bDRegistrosToolStripMenuItem
             // 
             this.bDRegistrosToolStripMenuItem.Name = "bDRegistrosToolStripMenuItem";
-            this.bDRegistrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDRegistrosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.bDRegistrosToolStripMenuItem.Text = "BD-Registros";
             this.bDRegistrosToolStripMenuItem.Click += new System.EventHandler(this.bDRegistrosToolStripMenuItem_Click);
             // 
             // bDIngresosToolStripMenuItem
             // 
             this.bDIngresosToolStripMenuItem.Name = "bDIngresosToolStripMenuItem";
-            this.bDIngresosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDIngresosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.bDIngresosToolStripMenuItem.Text = "BD-Ingresos";
             this.bDIngresosToolStripMenuItem.Click += new System.EventHandler(this.bDIngresosToolStripMenuItem_Click);
             // 
             // bDCapacidadToolStripMenuItem
             // 
             this.bDCapacidadToolStripMenuItem.Name = "bDCapacidadToolStripMenuItem";
-            this.bDCapacidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDCapacidadToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.bDCapacidadToolStripMenuItem.Text = "BD-Capacidad";
             this.bDCapacidadToolStripMenuItem.Click += new System.EventHandler(this.bDCapacidadToolStripMenuItem_Click);
             // 
-            // sensorToolStripMenuItem
+            // toolStripSeparator3
             // 
-            this.sensorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.puertoLectorToolStripMenuItem});
-            this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.sensorToolStripMenuItem.Text = "Un lector";
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(188, 6);
             // 
-            // puertoLectorToolStripMenuItem
+            // preferenciasToolStripMenuItem
             // 
-            this.puertoLectorToolStripMenuItem.Name = "puertoLectorToolStripMenuItem";
-            this.puertoLectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.puertoLectorToolStripMenuItem.Text = "Puerto lector";
+            this.preferenciasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.audioToolStripMenuItem,
+            this.controlManualToolStripMenuItem});
+            this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.preferenciasToolStripMenuItem.Text = "Preferencias";
             // 
-            // dosLectoresToolStripMenuItem
+            // audioToolStripMenuItem
             // 
-            this.dosLectoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.puertoIngresoToolStripMenuItem,
-            this.puertoSalidaToolStripMenuItem});
-            this.dosLectoresToolStripMenuItem.Name = "dosLectoresToolStripMenuItem";
-            this.dosLectoresToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.dosLectoresToolStripMenuItem.Text = "Dos lectores";
+            this.audioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.interfazPorVozToolStripMenuItem,
+            this.interfazNotificaciónToolStripMenuItem});
+            this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.audioToolStripMenuItem.Text = "Audio";
             // 
-            // puertoIngresoToolStripMenuItem
+            // interfazPorVozToolStripMenuItem
             // 
-            this.puertoIngresoToolStripMenuItem.Name = "puertoIngresoToolStripMenuItem";
-            this.puertoIngresoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.puertoIngresoToolStripMenuItem.Text = "Puerto Ingreso";
+            this.interfazPorVozToolStripMenuItem.Name = "interfazPorVozToolStripMenuItem";
+            this.interfazPorVozToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.interfazPorVozToolStripMenuItem.Text = "Interfaz por voz";
+            this.interfazPorVozToolStripMenuItem.Click += new System.EventHandler(this.interfazPorVozToolStripMenuItem_Click);
             // 
-            // puertoSalidaToolStripMenuItem
+            // interfazNotificaciónToolStripMenuItem
             // 
-            this.puertoSalidaToolStripMenuItem.Name = "puertoSalidaToolStripMenuItem";
-            this.puertoSalidaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.puertoSalidaToolStripMenuItem.Text = "Puerto Salida";
+            this.interfazNotificaciónToolStripMenuItem.Enabled = false;
+            this.interfazNotificaciónToolStripMenuItem.Name = "interfazNotificaciónToolStripMenuItem";
+            this.interfazNotificaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.interfazNotificaciónToolStripMenuItem.Text = "Interfaz notificación";
+            this.interfazNotificaciónToolStripMenuItem.Click += new System.EventHandler(this.interfazNotificaciónToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
+            // controlManualToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            this.controlManualToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.activadoToolStripMenuItem,
+            this.desactivadoToolStripMenuItem});
+            this.controlManualToolStripMenuItem.Name = "controlManualToolStripMenuItem";
+            this.controlManualToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.controlManualToolStripMenuItem.Text = "Control Manual";
             // 
-            // establecerAUnSensorToolStripMenuItem
+            // activadoToolStripMenuItem
             // 
-            this.establecerAUnSensorToolStripMenuItem.Name = "establecerAUnSensorToolStripMenuItem";
-            this.establecerAUnSensorToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.establecerAUnSensorToolStripMenuItem.Text = "Establecer a un sensor";
+            this.activadoToolStripMenuItem.Enabled = false;
+            this.activadoToolStripMenuItem.Name = "activadoToolStripMenuItem";
+            this.activadoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.activadoToolStripMenuItem.Text = "Activar";
+            this.activadoToolStripMenuItem.Click += new System.EventHandler(this.activadoToolStripMenuItem_Click);
             // 
-            // establecerADosSensoresToolStripMenuItem
+            // desactivadoToolStripMenuItem
             // 
-            this.establecerADosSensoresToolStripMenuItem.Name = "establecerADosSensoresToolStripMenuItem";
-            this.establecerADosSensoresToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.establecerADosSensoresToolStripMenuItem.Text = "Establecer a dos sensores";
+            this.desactivadoToolStripMenuItem.Name = "desactivadoToolStripMenuItem";
+            this.desactivadoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.desactivadoToolStripMenuItem.Text = "Desactivar";
+            this.desactivadoToolStripMenuItem.Click += new System.EventHandler(this.desactivadoToolStripMenuItem_Click);
             // 
-            // githubToolStripMenuItem
+            // editarToolStripMenuItem
             // 
-            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.githubToolStripMenuItem.Text = "Github";
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarIngresoToolStripMenuItem,
+            this.registrarSalidaToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.modificarCapacidadToolStripMenuItem,
+            this.reiniciarConteoToolStripMenuItem});
+            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.editarToolStripMenuItem.Text = "Editar";
             // 
             // registrarIngresoToolStripMenuItem
             // 
@@ -596,48 +623,60 @@ namespace ContadorVehicular
             this.modificarCapacidadToolStripMenuItem.Name = "modificarCapacidadToolStripMenuItem";
             this.modificarCapacidadToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.modificarCapacidadToolStripMenuItem.Text = "Modificar capacidad";
+            this.modificarCapacidadToolStripMenuItem.Click += new System.EventHandler(this.modificarCapacidadToolStripMenuItem_Click);
             // 
             // reiniciarConteoToolStripMenuItem
             // 
             this.reiniciarConteoToolStripMenuItem.Name = "reiniciarConteoToolStripMenuItem";
             this.reiniciarConteoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.reiniciarConteoToolStripMenuItem.Text = "Reiniciar conteo";
+            this.reiniciarConteoToolStripMenuItem.Click += new System.EventHandler(this.reiniciarConteoToolStripMenuItem_Click);
             // 
-            // btnManualPlus
+            // configuraciónToolStripMenuItem
             // 
-            this.btnManualPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnManualPlus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManualPlus.FlatAppearance.BorderSize = 0;
-            this.btnManualPlus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PaleGreen;
-            this.btnManualPlus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnManualPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManualPlus.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManualPlus.ForeColor = System.Drawing.Color.Transparent;
-            this.btnManualPlus.Image = ((System.Drawing.Image)(resources.GetObject("btnManualPlus.Image")));
-            this.btnManualPlus.Location = new System.Drawing.Point(0, 111);
-            this.btnManualPlus.Name = "btnManualPlus";
-            this.btnManualPlus.Size = new System.Drawing.Size(66, 71);
-            this.btnManualPlus.TabIndex = 6;
-            this.btnManualPlus.UseVisualStyleBackColor = false;
-            this.btnManualPlus.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnManualPlus_MouseUp);
+            this.configuraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sensorToolStripMenuItem,
+            this.toolStripSeparator1});
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
-            // btnManualLess
+            // sensorToolStripMenuItem
             // 
-            this.btnManualLess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnManualLess.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManualLess.FlatAppearance.BorderSize = 0;
-            this.btnManualLess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
-            this.btnManualLess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnManualLess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManualLess.Font = new System.Drawing.Font("Montserrat", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManualLess.ForeColor = System.Drawing.Color.White;
-            this.btnManualLess.Image = ((System.Drawing.Image)(resources.GetObject("btnManualLess.Image")));
-            this.btnManualLess.Location = new System.Drawing.Point(0, 216);
-            this.btnManualLess.Name = "btnManualLess";
-            this.btnManualLess.Size = new System.Drawing.Size(66, 71);
-            this.btnManualLess.TabIndex = 7;
-            this.btnManualLess.UseVisualStyleBackColor = false;
-            this.btnManualLess.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnManualLess_MouseUp);
+            this.sensorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.puertoLectorToolStripMenuItem});
+            this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.sensorToolStripMenuItem.Text = "Un lector";
+            // 
+            // puertoLectorToolStripMenuItem
+            // 
+            this.puertoLectorToolStripMenuItem.Name = "puertoLectorToolStripMenuItem";
+            this.puertoLectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puertoLectorToolStripMenuItem.Text = "Puerto lector";
+            this.puertoLectorToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.puertoLectorToolStripMenuItem_DropDownItemClicked);
+            this.puertoLectorToolStripMenuItem.Click += new System.EventHandler(this.puertoLectorToolStripMenuItem_Click);
+            this.puertoLectorToolStripMenuItem.MouseHover += new System.EventHandler(this.puertoLectorToolStripMenuItem_MouseHover);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.githubToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // githubToolStripMenuItem
+            // 
+            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubToolStripMenuItem.Text = "Github";
+            this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -719,12 +758,7 @@ namespace ContadorVehicular
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sensorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puertoLectorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dosLectoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem puertoIngresoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem puertoSalidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem establecerAUnSensorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem establecerADosSensoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarIngresoToolStripMenuItem;
@@ -734,6 +768,14 @@ namespace ContadorVehicular
         private System.Windows.Forms.ToolStripMenuItem reiniciarConteoToolStripMenuItem;
         private System.Windows.Forms.Button btnManualLess;
         private System.Windows.Forms.Button btnManualPlus;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem preferenciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem audioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem interfazPorVozToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem interfazNotificaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlManualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem desactivadoToolStripMenuItem;
     }
 }
 

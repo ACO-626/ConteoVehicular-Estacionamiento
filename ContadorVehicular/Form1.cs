@@ -36,6 +36,7 @@ namespace ContadorVehicular
 
         bool endConection = false; //Bandera de comunicación serial
         bool salida;               //Variable que indica si el auto va de salida
+        bool advertencia = false;
         //string textEvento;         //Mensaje de comunicación serial 
 
         private Form activeForm = null;
@@ -47,7 +48,7 @@ namespace ContadorVehicular
         int capacidadDefault = 257;
 
         Random rnd = new Random();
-        bool rndAudio = true;
+        bool rndAudio = false;
         int randomNumber;
 
         #endregion
@@ -67,10 +68,13 @@ namespace ContadorVehicular
             {
                 ReplaceValueBD(capacidadDefault.ToString(), pathBDCapacity);
                 capacidad = capacidadDefault;
+                //VerificarFuente();
 
-            }else
+            }
+            else
             {
                 capacidad = int.Parse(SimpleConsult(pathBDCapacity));
+                //VerificarFuente();
             }
             
             labelEspacios.Text = (capacidad - ingresos).ToString();
@@ -290,6 +294,18 @@ namespace ContadorVehicular
         private void BtnEstacionamiento_Click(object sender, EventArgs e)
         {
             //AbrirFormulario(new FormEstacionamiento());
+            if (!File.Exists(pathBDCapacity))
+            {
+                ReplaceValueBD(capacidadDefault.ToString(), pathBDCapacity);
+                capacidad = capacidadDefault;
+
+            }
+            else
+            {
+                capacidad = int.Parse(SimpleConsult(pathBDCapacity));
+                
+            }
+            //VerificarFuente();
             AbrirFormularioEstacionamiento();
             
             labelHeaderTittle.Text = "Sistema de conteo";
@@ -300,6 +316,7 @@ namespace ContadorVehicular
             btnSettings.BackColor = Color.FromArgb(31, 31, 31);
             btnStatics.BackColor = Color.FromArgb(31, 31, 31);
             btnEstacionamiento.BackColor = Color.FromArgb(205, 23, 30);
+            
         }
 
         private void BtnStatics_Click(object sender, EventArgs e)
@@ -372,7 +389,10 @@ namespace ContadorVehicular
         private string SimpleConsult(string pathBD)
         {
             TextReader lectorSimple = new StreamReader(pathBD);
-            return lectorSimple.ReadLine();
+            //lectorSimple.ReadLine();
+            string consulta = lectorSimple.ReadLine();
+            lectorSimple.Close();
+            return consulta;
         }
         #endregion
 
@@ -453,6 +473,47 @@ namespace ContadorVehicular
         {
             Process.Start(pathBDCapacity);
         }
+            //Audio
+        private void interfazPorVozToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rndAudio = true;
+            interfazNotificaciónToolStripMenuItem.Enabled = true;
+            interfazPorVozToolStripMenuItem.Enabled = false;
+        }
+
+        private void interfazNotificaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rndAudio = false;
+            interfazNotificaciónToolStripMenuItem.Enabled = false;
+            interfazPorVozToolStripMenuItem.Enabled = true;
+        }
+
+        private void activadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnManualPlus.Visible = true;
+            btnManualLess.Visible = true;
+            activadoToolStripMenuItem.Enabled = false;
+            desactivadoToolStripMenuItem.Enabled = true;
+        }
+        private void desactivadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnManualPlus.Visible = false;
+            btnManualLess.Visible = false;
+            activadoToolStripMenuItem.Enabled = true;
+            desactivadoToolStripMenuItem.Enabled = false;
+        }
+
+        private void reiniciarConteoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ingresos = 0;
+            ReplaceValueBD("0", pathBDConteo);
+            formEstacionamiento.Ingresos = ingresos.ToString();
+            formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
+            formEstacionamiento.refrescarValor();
+
+        }
+
+
         #endregion
 
         #region Editar
@@ -468,6 +529,18 @@ namespace ContadorVehicular
             
         }
 
+        //Editar capacidad
+
+        private void modificarCapacidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioSettings();
+            labelHeaderTittle.Text = "Ajustes";
+            labelHeaderSubtittle.Text = "Requiere identificación";
+            btnEstacionamiento.BackColor = Color.FromArgb(31, 31, 31);
+            btnSesion.BackColor = Color.FromArgb(31, 31, 31);
+            btnStatics.BackColor = Color.FromArgb(31, 31, 31);
+            btnSettings.BackColor = Color.FromArgb(205, 23, 30);
+        }
 
 
 
@@ -475,6 +548,44 @@ namespace ContadorVehicular
 
 
 
+        #endregion
+
+        #region Configuracion
+        private void puertoLectorToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+            puertoLectorToolStripMenuItem.DropDownItems.Clear();
+            string[] ports = SerialPort.GetPortNames();
+            foreach (var i in ports)
+            {
+                puertoLectorToolStripMenuItem.DropDownItems.Add(i);
+            }
+        }
+        private void puertoLectorToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            //Button btn = sender as Button;
+            //MessageBox.Show(btn.Text);
+            puerto.Close();
+            puerto.PortName = e.ClickedItem.Text;
+            //MessageBox.Show("Aseguresé de tener conectado el lector al puerto: "+e.ClickedItem.Text+ " para una adecuada lectura","Cambio de puerto",MessageBoxButtons.OK);
+            puerto.Open();
+        }
+
+        private void puertoLectorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            puertoLectorToolStripMenuItem.DropDownItems.Clear();
+            string[] ports = SerialPort.GetPortNames();
+            foreach (var i in ports)
+            {
+                puertoLectorToolStripMenuItem.DropDownItems.Add(i);
+            }
+        }
+        #endregion
+
+        #region Ayuda
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/ACO-626/ConteoVehicular-Estacionamiento");
+        }
         #endregion
 
         #endregion
@@ -493,7 +604,6 @@ namespace ContadorVehicular
 
         #endregion
 
-
         #region FuncionesManipulacionManual
         private void ManualPlus()
         {
@@ -509,7 +619,18 @@ namespace ContadorVehicular
             formEstacionamiento.Ingresos = ingresos.ToString();
             formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
             formEstacionamiento.refrescarValor();
-
+            if (ingresos > capacidad)
+            {
+                if(!advertencia)
+                {
+                    MessageBox.Show("El número de vehículos establecido ha sido rebasado", "Desborde vehicualr", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    advertencia = true;
+                }
+                
+            }else 
+            {
+                advertencia = false;
+            }
             rndAudio = rndActual;
         }
 
@@ -536,6 +657,20 @@ namespace ContadorVehicular
                 MessageBox.Show("No puede registrar una salida porque no hay ingresos registrados", "REGISTRO IMPOSIBLE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         #endregion
 
