@@ -31,13 +31,9 @@ namespace ContadorVehicular
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelCom = new System.Windows.Forms.Label();
-            this.labelCounterCar = new System.Windows.Forms.Label();
-            this.labelSimpleEspacios = new System.Windows.Forms.Label();
-            this.labelEspacios = new System.Windows.Forms.Label();
             this.BarraTittle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelSimpleQWindowTittle = new System.Windows.Forms.Label();
-            this.labelSimpleCarros = new System.Windows.Forms.Label();
             this.btnMax2 = new System.Windows.Forms.PictureBox();
             this.btnMinimiza = new System.Windows.Forms.PictureBox();
             this.btnMax = new System.Windows.Forms.PictureBox();
@@ -110,51 +106,11 @@ namespace ContadorVehicular
             this.labelCom.TabIndex = 0;
             this.labelCom.Text = "Mensaje";
             // 
-            // labelCounterCar
-            // 
-            this.labelCounterCar.AutoSize = true;
-            this.labelCounterCar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.labelCounterCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCounterCar.ForeColor = System.Drawing.Color.White;
-            this.labelCounterCar.Location = new System.Drawing.Point(1023, 7);
-            this.labelCounterCar.Name = "labelCounterCar";
-            this.labelCounterCar.Size = new System.Drawing.Size(18, 20);
-            this.labelCounterCar.TabIndex = 2;
-            this.labelCounterCar.Text = "0";
-            // 
-            // labelSimpleEspacios
-            // 
-            this.labelSimpleEspacios.AutoSize = true;
-            this.labelSimpleEspacios.BackColor = System.Drawing.Color.Transparent;
-            this.labelSimpleEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimpleEspacios.ForeColor = System.Drawing.Color.White;
-            this.labelSimpleEspacios.Location = new System.Drawing.Point(813, 7);
-            this.labelSimpleEspacios.Name = "labelSimpleEspacios";
-            this.labelSimpleEspacios.Size = new System.Drawing.Size(78, 20);
-            this.labelSimpleEspacios.TabIndex = 4;
-            this.labelSimpleEspacios.Text = "Espacios:";
-            // 
-            // labelEspacios
-            // 
-            this.labelEspacios.AutoSize = true;
-            this.labelEspacios.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.labelEspacios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEspacios.ForeColor = System.Drawing.Color.White;
-            this.labelEspacios.Location = new System.Drawing.Point(897, 7);
-            this.labelEspacios.Name = "labelEspacios";
-            this.labelEspacios.Size = new System.Drawing.Size(18, 20);
-            this.labelEspacios.TabIndex = 5;
-            this.labelEspacios.Text = "0";
-            // 
             // BarraTittle
             // 
             this.BarraTittle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(23)))), ((int)(((byte)(30)))));
             this.BarraTittle.Controls.Add(this.pictureBox1);
             this.BarraTittle.Controls.Add(this.labelSimpleQWindowTittle);
-            this.BarraTittle.Controls.Add(this.labelEspacios);
-            this.BarraTittle.Controls.Add(this.labelSimpleCarros);
-            this.BarraTittle.Controls.Add(this.labelCounterCar);
-            this.BarraTittle.Controls.Add(this.labelSimpleEspacios);
             this.BarraTittle.Controls.Add(this.btnMax2);
             this.BarraTittle.Controls.Add(this.btnMinimiza);
             this.BarraTittle.Controls.Add(this.btnMax);
@@ -187,18 +143,6 @@ namespace ContadorVehicular
             this.labelSimpleQWindowTittle.Size = new System.Drawing.Size(215, 20);
             this.labelSimpleQWindowTittle.TabIndex = 7;
             this.labelSimpleQWindowTittle.Text = "Sistema de Conteo Vehicular";
-            // 
-            // labelSimpleCarros
-            // 
-            this.labelSimpleCarros.AutoSize = true;
-            this.labelSimpleCarros.BackColor = System.Drawing.Color.Transparent;
-            this.labelSimpleCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSimpleCarros.ForeColor = System.Drawing.Color.White;
-            this.labelSimpleCarros.Location = new System.Drawing.Point(957, 7);
-            this.labelSimpleCarros.Name = "labelSimpleCarros";
-            this.labelSimpleCarros.Size = new System.Drawing.Size(60, 20);
-            this.labelSimpleCarros.TabIndex = 6;
-            this.labelSimpleCarros.Text = "Carros:";
             // 
             // btnMax2
             // 
@@ -545,7 +489,7 @@ namespace ContadorVehicular
             this.interfazPorVozToolStripMenuItem,
             this.interfazNotificaciónToolStripMenuItem});
             this.audioToolStripMenuItem.Name = "audioToolStripMenuItem";
-            this.audioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.audioToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.audioToolStripMenuItem.Text = "Audio";
             // 
             // interfazPorVozToolStripMenuItem
@@ -559,7 +503,7 @@ namespace ContadorVehicular
             // 
             this.interfazNotificaciónToolStripMenuItem.Enabled = false;
             this.interfazNotificaciónToolStripMenuItem.Name = "interfazNotificaciónToolStripMenuItem";
-            this.interfazNotificaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.interfazNotificaciónToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.interfazNotificaciónToolStripMenuItem.Text = "Interfaz notificación";
             this.interfazNotificaciónToolStripMenuItem.Click += new System.EventHandler(this.interfazNotificaciónToolStripMenuItem_Click);
             // 
@@ -646,13 +590,13 @@ namespace ContadorVehicular
             this.sensorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.puertoLectorToolStripMenuItem});
             this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.sensorToolStripMenuItem.Text = "Un lector";
             // 
             // puertoLectorToolStripMenuItem
             // 
             this.puertoLectorToolStripMenuItem.Name = "puertoLectorToolStripMenuItem";
-            this.puertoLectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puertoLectorToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.puertoLectorToolStripMenuItem.Text = "Puerto lector";
             this.puertoLectorToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.puertoLectorToolStripMenuItem_DropDownItemClicked);
             this.puertoLectorToolStripMenuItem.Click += new System.EventHandler(this.puertoLectorToolStripMenuItem_Click);
@@ -661,7 +605,7 @@ namespace ContadorVehicular
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(203, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(119, 6);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -674,7 +618,7 @@ namespace ContadorVehicular
             // githubToolStripMenuItem
             // 
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.githubToolStripMenuItem.Text = "Github";
             this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
             // 
@@ -719,9 +663,6 @@ namespace ContadorVehicular
         #endregion
 
         private System.Windows.Forms.Label labelCom;
-        private System.Windows.Forms.Label labelCounterCar;
-        private System.Windows.Forms.Label labelSimpleEspacios;
-        private System.Windows.Forms.Label labelEspacios;
         private System.Windows.Forms.Panel BarraTittle;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelCont;
@@ -736,7 +677,6 @@ namespace ContadorVehicular
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnStatics;
         private System.Windows.Forms.Button btnSesion;
-        private System.Windows.Forms.Label labelSimpleCarros;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelSimpleQWindowTittle;
         private System.Windows.Forms.Panel panelHeader;

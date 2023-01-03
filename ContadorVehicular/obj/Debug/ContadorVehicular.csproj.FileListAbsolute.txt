@@ -12,3 +12,7 @@ A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\obj\D
 A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\obj\Debug\ContadorVehicular.FormSettings.resources
 A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\obj\Debug\ContadorVehicular.FormStatics.resources
 A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\obj\Debug\ContadorVehicular.Inicio.resources
+A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\bin\Debug\ContadorVehicular.exe.manifest
+A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\bin\Debug\ContadorVehicular.application
+A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\obj\Debug\ContadorVehicular.exe.manifest
+A:\11VO SEMESTRE\Dirección de proyectos\ConteoVehicular\ContadorVehicular\obj\Debug\ContadorVehicular.application

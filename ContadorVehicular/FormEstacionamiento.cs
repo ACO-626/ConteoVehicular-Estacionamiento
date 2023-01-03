@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace ContadorVehicular
 {
@@ -81,6 +82,11 @@ namespace ContadorVehicular
                 labelEspacios.Font = new Font("Montserrat", 75f, labelIngresos.Font.Style);
                 //MessageBox.Show(labelEspacios.Font.Size.ToString());
             }
+        }
+
+        private void lbSimpleBy_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/ACO-626");
         }
     }
 }

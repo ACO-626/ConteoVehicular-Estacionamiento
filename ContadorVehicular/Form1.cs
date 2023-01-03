@@ -77,7 +77,7 @@ namespace ContadorVehicular
                 //VerificarFuente();
             }
             
-            labelEspacios.Text = (capacidad - ingresos).ToString();
+            
             try
             {
                 regisBeep.SoundLocation = @"..\..\sound\registerBeep.wav";
@@ -136,7 +136,7 @@ namespace ContadorVehicular
                                 listaEstacionamiento.Remove(cadena);
                                 labelCom.Text = "salida" + cadena;
                                 ingresos--;
-                                labelCounterCar.Text = ingresos.ToString();
+                                
                                 salida = false;
                                 RegistrarBD(cadena,"salida ",pathBDRegistro,true);
                                 ReplaceValueBD(ingresos.ToString(), pathBDConteo);
@@ -146,7 +146,7 @@ namespace ContadorVehicular
                                 listaEstacionamiento.Add(cadena);
                                 labelCom.Text = "entrada" + cadena;
                                 ingresos++;
-                                labelCounterCar.Text = ingresos.ToString();
+                                
                                 RegistrarBD(cadena, "entrada",pathBDRegistro,false);
                                 ReplaceValueBD(ingresos.ToString(),pathBDConteo);
 
@@ -154,7 +154,7 @@ namespace ContadorVehicular
                             formEstacionamiento.Ingresos = ingresos.ToString();
                             formEstacionamiento.Espacios = (capacidad - ingresos).ToString();
                             formEstacionamiento.refrescarValor();
-                            labelEspacios.Text = (capacidad - ingresos).ToString();
+                            
                             #endregion                           
                         }
                         ));

@@ -37,6 +37,7 @@ namespace ContadorVehicular
             this.SimpleLabelEstacionados = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbSimpleBy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,12 +119,28 @@ namespace ContadorVehicular
             this.panel1.Size = new System.Drawing.Size(23, 235);
             this.panel1.TabIndex = 11;
             // 
+            // lbSimpleBy
+            // 
+            this.lbSimpleBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSimpleBy.AutoSize = true;
+            this.lbSimpleBy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbSimpleBy.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSimpleBy.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lbSimpleBy.Location = new System.Drawing.Point(1049, 565);
+            this.lbSimpleBy.Name = "lbSimpleBy";
+            this.lbSimpleBy.Size = new System.Drawing.Size(62, 18);
+            this.lbSimpleBy.TabIndex = 16;
+            this.lbSimpleBy.Text = "By ACO";
+            this.lbSimpleBy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSimpleBy.Click += new System.EventHandler(this.lbSimpleBy_Click);
+            // 
             // FormEstacionamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1123, 592);
+            this.Controls.Add(this.lbSimpleBy);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SimpleLabelEstacionados);
             this.Controls.Add(this.labelIngresos);
@@ -149,5 +166,6 @@ namespace ContadorVehicular
         private System.Windows.Forms.Label SimpleLabelEstacionados;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbSimpleBy;
     }
 }

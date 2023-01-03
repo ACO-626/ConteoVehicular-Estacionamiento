@@ -84,5 +84,10 @@ namespace ContadorVehicular
         {
             Process.Start("https://github.com/ACO-626/ConteoVehicular-Estacionamiento");
         }
+
+        private void lbSimpleBy_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/ACO-626");
+        }
     }
 }

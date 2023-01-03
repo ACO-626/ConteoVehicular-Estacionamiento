@@ -35,6 +35,7 @@ namespace ContadorVehicular
             this.lbLinkAyuda = new System.Windows.Forms.LinkLabel();
             this.SimplelbCapacidadAct = new System.Windows.Forms.Label();
             this.lbCapacity = new System.Windows.Forms.Label();
+            this.lbSimpleBy = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SimpleLbCapa
@@ -102,11 +103,27 @@ namespace ContadorVehicular
             this.lbCapacity.TabIndex = 31;
             this.lbCapacity.Text = "Capacidad actual";
             // 
+            // lbSimpleBy
+            // 
+            this.lbSimpleBy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSimpleBy.AutoSize = true;
+            this.lbSimpleBy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbSimpleBy.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSimpleBy.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lbSimpleBy.Location = new System.Drawing.Point(790, 532);
+            this.lbSimpleBy.Name = "lbSimpleBy";
+            this.lbSimpleBy.Size = new System.Drawing.Size(62, 18);
+            this.lbSimpleBy.TabIndex = 32;
+            this.lbSimpleBy.Text = "By ACO";
+            this.lbSimpleBy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSimpleBy.Click += new System.EventHandler(this.lbSimpleBy_Click);
+            // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 559);
+            this.Controls.Add(this.lbSimpleBy);
             this.Controls.Add(this.lbCapacity);
             this.Controls.Add(this.SimplelbCapacidadAct);
             this.Controls.Add(this.lbLinkAyuda);
@@ -128,5 +145,6 @@ namespace ContadorVehicular
         private System.Windows.Forms.LinkLabel lbLinkAyuda;
         private System.Windows.Forms.Label SimplelbCapacidadAct;
         private System.Windows.Forms.Label lbCapacity;
+        private System.Windows.Forms.Label lbSimpleBy;
     }
 }
