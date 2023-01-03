@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ContadorVehicular.exe" size="1139128">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ContadorVehicular.exe" size="1139640">
       <assemblyIdentity name="ContadorVehicular" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bdam7wcwm7khi3iRVTr1Xfl9vwi7ecf3iEIT4GiPJgM=</dsig:DigestValue>
+        <dsig:DigestValue>ng7+3fXwBmqgkBnukwdgZGa3V7jmidi3omrwNEiF2lU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

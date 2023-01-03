@@ -80,6 +80,8 @@ namespace ContadorVehicular
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sitioWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BarraTittle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMax2)).BeginInit();
@@ -590,7 +592,7 @@ namespace ContadorVehicular
             this.sensorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.puertoLectorToolStripMenuItem});
             this.sensorToolStripMenuItem.Name = "sensorToolStripMenuItem";
-            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.sensorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sensorToolStripMenuItem.Text = "Un lector";
             // 
             // puertoLectorToolStripMenuItem
@@ -605,12 +607,14 @@ namespace ContadorVehicular
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(119, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.githubToolStripMenuItem});
+            this.githubToolStripMenuItem,
+            this.soporteToolStripMenuItem,
+            this.sitioWebToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
@@ -618,9 +622,23 @@ namespace ContadorVehicular
             // githubToolStripMenuItem
             // 
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
-            this.githubToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.githubToolStripMenuItem.Text = "Github";
             this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
+            // 
+            // soporteToolStripMenuItem
+            // 
+            this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
+            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soporteToolStripMenuItem.Text = "Soporte";
+            this.soporteToolStripMenuItem.Click += new System.EventHandler(this.soporteToolStripMenuItem_Click);
+            // 
+            // sitioWebToolStripMenuItem
+            // 
+            this.sitioWebToolStripMenuItem.Name = "sitioWebToolStripMenuItem";
+            this.sitioWebToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sitioWebToolStripMenuItem.Text = "Sitio Web";
+            this.sitioWebToolStripMenuItem.Click += new System.EventHandler(this.sitioWebToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -716,6 +734,8 @@ namespace ContadorVehicular
         private System.Windows.Forms.ToolStripMenuItem controlManualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem activadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem desactivadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem soporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sitioWebToolStripMenuItem;
     }
 }
 

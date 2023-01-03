@@ -586,6 +586,15 @@ namespace ContadorVehicular
         {
             Process.Start("https://github.com/ACO-626/ConteoVehicular-Estacionamiento");
         }
+        private void soporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://aco-626.github.io/ConteoVehicular-Estacionamiento/soporte.html");
+        }
+
+        private void sitioWebToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://aco-626.github.io/ConteoVehicular-Estacionamiento/index.html");
+        }
         #endregion
 
         #endregion
@@ -672,8 +681,9 @@ namespace ContadorVehicular
 
 
 
+
         #endregion
 
-       
+        
     }
 }
